@@ -1,0 +1,432 @@
+{
+    "@@locale": "fr",
+    "validphone": "Entrez un numéro de téléphone valide",
+    "searchCountry": "Choisir le pays",
+    "invalidPhoneNumber": "Numéro de téléphone invalide",
+    "enterOtpCode": "Entrez le code OTP",
+    "veg": "Veg",
+    "nonVeg": "Non-Veg",
+    "customize": "Personnaliser",
+    "stater": "Stater",
+    "mainCourse": "Plat principal",
+    "burger": "Veg Burger",
+    "fast": "FAST FOOD",
+    "sea": "FRUIT DE MER",
+    "chinese": "CHINOIS",
+    "desert": "DÉSERT",
+    "sandwich": "Sandwich Veg",
+    "chicken": "Poulet frit",
+    "juice": "Jus de pastèque",
+    "cheese": "Fromage supplémentaire",
+    "type": "Fast Food, italien, chinois",
+    "storeAddress": "City Park alimentation",
+    "store": "Food Junction",
+    "storeFound": "restaurants trouvés",
+    "lightMode": "Mode lumière",
+    "lightText": "Découvrez un mode d'éclairage passionnant",
+    "accepted": "accepté",
+    "submit": "Soumettre",
+    "outStock": "En rupture de stock",
+    "setLocation": "Définir l'emplacement de livraison",
+    "enterLocation": "Entrez l'emplacement",
+    "review": "Mes observations",
+    "hey": "Hey Samantha,\n\n vous êtes presque. \nIndiquez votre numéro de\n téléphone pour vérification.",
+    "name1": "George Timber",
+    "name2": "Emili Johnson",
+    "content1": "le goût des aliments super ainsi que le service de livraison rapide. Vraiment apprécier l'emballage et la qualité des aliments livrés. Fonce !!",
+    "content2": "service de livraison rapide et vraiment bon goût des aliments. Vraiment apprécier l'emballage et la qualité des aliments livrés. Doit commander poulet au curry.",
+    "language": "Choisir la langue",
+    "display": "Sélectionnez le mode",
+    "darkMode": "dark mode",
+    "darkText": "Découvrez un mode sombre passionnant",
+    "settings": "Paramètres",
+    "or": "Ou",
+    "continueWith": "Continue avec",
+    "facebook": "Facebook",
+    "google": "Google",
+    "apple": "Pomme",
+    "invalidNumber": "Numéro invalide",
+    "networkError": "Erreur réseau",
+    "bodyLarge": "Livrer presque",
+    "bodyText2": "Tout.",
+    "mobileText": "Entrez le numéro de mobile",
+    "continueText": "Continuer",
+    "register": "S'inscrire",
+    "invalidName": "Nom incorrect",
+    "invalidEmail": "Email invalide",
+    "invalidNameAndEmail": "Nom et adresse e-mail non valides",
+    "fullName": "Nom du bar",
+    "emailAddress": "Adresse e-mail",
+    "mobileNumber": "Numéro de portable",
+    "verificationText": "Nous enverrons le code de vérification sur le numéro ci-dessus.",
+    "verification": "Vérification",
+    "checkNetwork": "Vérifiez votre réseau ou le numéro de téléphone saisi",
+    "invalidOTP": "OTP non valide",
+    "enterVerification": "Entrez le code de vérification que nous avons envoyé sur un numéro donné.",
+    "verificationCode": "ENTREZ LE CODE DE VÉRIFICATION",
+    "resend": "Renvoyer",
+    "offlineText": "Tu es hors ligne",
+    "onlineText": "Tu es en ligne",
+    "goOnline": "ALLER EN LIGNE",
+    "goOffline": "SE DÉCONNECTER",
+    "orders": "Ordres",
+    "itemSold": "Objets vendus",
+    "earnings": "Gains",
+    "location": "Autorisation de localisation refusée!  Accordez la localisation à l'application.",
+    "grant": "Subvention",
+    "homeText": "Accueil",
+    "account": "Mon compte",
+    "orderText": "Mes commandes",
+    "insight": "Perspicacité",
+    "wallet": "Portefeuille",
+    "tnc": "Conditions générales",
+    "pnp": "Politique de confidentialité",
+    "support": "Assistance",
+    "aboutUs": "À propos de nous",
+    "logout": "Se déconnecter",
+    "login": "S'identifier",
+    "loggingOut": "Déconnecter",
+    "areYouSure": "Êtes-vous sûr?",
+    "yes": "Oui",
+    "no": "Non",
+    "sendToBank": "Envoyer à la banque",
+    "availableBalance": "Solde disponible",
+    "bankInfo": "Informations bancaires",
+    "accountHolderName": "Nom du titulaire du compte",
+    "bankName": "Nom de banque",
+    "branchCode": "Code de la succursale",
+    "accountNumber": "Numéro de compte",
+    "enterAmountToTransfer": "Entrez le montant à transférer",
+    "aboutDelivoo": "À propos de Delivoo",
+    "aboutBody": "\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar porta sagittis. Sed id varius magna. Etiam felis neque, gravida vitae elementum non, consequat eu odio. Mauris cursus commodo nisi sed imperdiet. Fusce vitae vehicula ipsum, ut commodo lorem. Praesent interdum blandit condimentum. Curabitur vel orci vitae odio congue facilisis eget eget diam.\n\nNam a arcu efficitur, ornare leo eu, euismod leo. Vestibulum porttitor varius leo, eget posuere felis congue vel. Sed sit amet erat quam. Mauris et ex sapien. Sed venenatis, felis sed eleifend vulputate, mauris libero pretium urna, non hendrerit urna quam vitae justo. Maecenas rhoncus lectus consectetur eros pretium feugiat.\n",
+    "ourVision": "Notre vision",
+    "companyPolicy": "Politique d'entreprise",
+    "termsOfUse": "Conditions d'utilisation",
+    "message": "Votre message",
+    "enterMessage": "Tapez votre message",
+    "orWrite": "Ou écrivez-nous vos questions",
+    "yourWords": "Vos paroles comptent beaucoup pour nous.",
+    "online": "En ligne",
+    "recent": "Récent",
+    "vegetable": "Légumes et fruits",
+    "viewAll": "Voir toutes les transactions",
+    "itemsFound": "Objets trouvés",
+    "editProfile": "Editer le profil",
+    "featureImage": "Image caractéristique",
+    "uploadPhoto": "Envoyer la photo",
+    "profileInfo": "Informations sur le magasin",
+    "gender": "Le sexe",
+    "updateInfo": "Information sur la mise à jour",
+    "instruction": "Gardez les tomates dans un sac séparé s'il vous plaît.",
+    "cod": "Paiement à la livraison",
+    "viewOrderInfo": "Afficher les informations de commande",
+    "ready": "Prêt à livrer",
+    "storeText": "Marché de l'Union",
+    "storeProfile": "\nProfil du magasin",
+    "tomato": "Tomates rouges fraîches",
+    "onion": "Oignons rouges frais",
+    "fingers": "Doigts de dame frais",
+    "top": "TOP 5 DES ARTICLES DE VENTE",
+    "total": "Total des ventes de 112 articles",
+    "sales": "Ventes",
+    "category": "Catégorie",
+    "address": "Adresse",
+    "storeTimings": "Horaires du magasin",
+    "openingTime": "Horaire d'ouverture",
+    "closingTime": "Heure de fermeture",
+    "product": "Mes produits",
+    "stock": "En stock",
+    "pending": "En attente",
+    "item": "ARTICLES)",
+    "sub": "Sous-total",
+    "service": "Frais de service",
+    "payment": "Information de paiement",
+    "add": "Ajouter",
+    "edit": "Modifier",
+    "info": "INFORMATIONS SUR L'ARTICLE",
+    "title": "TITRE DE L'ARTICLE",
+    "enterTitle": "Entrez le nom de l'article",
+    "itemCategory": "CATÉGORIE D'ARTICLES",
+    "selectCategory": "Sélectionnez la catégorie d'article",
+    "price": "Prix",
+    "enterPrice": "Entrez le prix",
+    "quantity": "QUANTITÉ",
+    "enterQuantity": "Entrez la quantité",
+    "addMore": "+ AJOUTER PLUS D'OPTIONS",
+    "cropImage": "Recadrer l'image",
+    "image": "Image de l'article",
+    "newOrder": "NOUVELLES COMMANDES",
+    "pastOrder": "Historique de vos commandes",
+    "vegetables": "DES LÉGUMES",
+    "fruits": "DES FRUITS",
+    "herbs": "HERBES",
+    "dairy": "LAITIER",
+    "items": "Articles",
+    "heyThere": "Héy? Combien de temps?",
+    "onMyWay": "Sur mon chemin monsieur, atteindra en 10 minutes",
+    "deliveryPartner": "Partenaire de livraison",
+    "orderNumber": "Numéro de commande",
+    "welcomeToICUPA": "Bienvenue chez Icupa Vendor",
+    "whatsappSignUp": "Inscrivez-vous avec WhatsApp",
+    "whatsappNo": "Numéro WhatsApp",
+    "completed": "Complété",
+    "categoryText": "atégorie",
+    "addProduct": "Ajouter un produit",
+    "preferredDrivers": "ilotes préférés",
+    "driverFound": "ilotes trouvés",
+    "driversCanPreferred": "ilotes que vous pouvez préférer",
+    "alreadyAddedDrivers": "ous avez déjà ajouté tous les pilotes",
+    "editAndRemove": "Modifier et supprimer",
+    "remove": "Supprimer",
+    "wantAddProduct": "Voulez-vous ajouter ce produit",
+    "editORDelete": "odifier ou supprimer cet élément",
+    "uploadImage": "élécharger une image",
+    "uploadProduct": "élécharger le produit",
+    "noOrder": "Aucune commande trouvée!",
+    "beingPrepared": "En cours",
+    "served": "Servie",
+    "confirmOrder": "Confirmer la commande",
+    "confirmOrderBody": "Voulez-vous confirmer cette commande ?",
+    "confirm": "Confirmer",
+    "reject": "Rejeter",
+    "cancel": "Annuler",
+    "rejected": "Rejetée",
+    "rejectOrder": "Rejeter la commande",
+    "rejectOrderBody": "Do you want to reject this order?",
+    "markServed": "Marquer comme servi",
+    "markServedBody": "Voulez-vous vraiment marquer cette commande comme servie ?",
+    "outOfStock": "Epuisé",
+    "otherReason": "Autres raisons",
+    "tableNO": "Numéro de tableau",
+    "tip": "Tip",
+    "update": "Mise à jour",
+    "searchHere": "Rechercher ici",
+    "tMoneyAccount": "Compte TMoney",
+    "mMoneyAccount": "Compte MoMo",
+    "tMoneycode": "Code TMoney",
+    "mMoneycode": "Code MoMo",
+    "mobileAccount": "Compte {mobile}",
+    "@mobileAccount": {
+        "description": "Mobile Account",
+        "placeholders": {
+            "mobile": {
+                "type": "String",
+                "description": "Mobile name"
+            }
+        }
+    },
+    "mobileCode": "Code {code}",
+    "@mobileCode": {
+        "description": "Mobile Code",
+        "placeholders": {
+            "code": {
+                "type": "String",
+                "description": "Mobile code"
+            }
+        }
+    },
+    "barAddress": "Adresse du bar",
+    "barProfile": "Profil du bar",
+    "activateStore": "Activer le Bar",
+    "enterAddress": "Entrer l'adresse e-mail",
+    "selectLanguage": "Sélectionner la langue",
+    "privacy": "Politique de Confidentialité d’ICUPA",
+    "lastupdate": "Dernière mise à jour : 5 septembre 2023",
+    "important": "Important",
+    "sub_":
+        "Dans une ère définie par la révolution numérique, la protection de la vie privée des utilisateurs se dresse comme un phare de confiance. En tant que gardiens de vos données, nous apprécions la confiance que vous instillez dans notre technologie. Cet Avis de Confidentialité éclaire la manière dont nous collectons, utilisons et protégeons vos informations personnelles lors de l’interaction avec notre Application Mobile.",
+    "one":
+        "1. Le Fondement de Notre Engagement en Matière de Confidentialité",
+    "oneone":
+        "1.1 La confidentialité et la sécurité de vos données personnelles sont primordiales pour nous. Nous croyons en la communication transparente de nos pratiques de gestion des données pour renforcer la confiance que vous avez dans nos services.",
+    "onetwo":
+        "1.2 Les informations collectées seront uniquement utilisées aux fins déclarées ici, et nous nous engageons à respecter les principes suivants :",
+    "lione":
+        "Obtenir une permission explicite avant de collecter, transférer ou traiter vos données personnelles sauf si la loi l’exige.",
+    "litwo":
+        "Obtenir une permission explicite avant de collecter, transférer ou traiter vos données personnelles sauf si la loi l’exige.",
+    "lithree":
+        "Limiter notre utilisation de vos données aux fins dont vous avez été informé, à moins que nous obtenions un consentement supplémentaire ou que nous soyons légalement obligés de faire autrement.",
+    "two": "2. Paysage de la Collecte de Données",
+    "twoone":
+        "2.1 En vous inscrivant sur notre application, nous pouvons recueillir des identifiants de base : nom, email, numéro de téléphone, date de naissance, adresse résidentielle, et plus, en fonction de vos préférences d’enregistrement.",
+    "twotwo":
+        "2.2 Pour des fonctionnalités améliorées, nous pourrions nécessiter des détails tels que vos informations bancaires, les détails de la carte, et les spécificités de l’appareil.",
+    "twothree":
+        "2.3 Notre système agrège des données de vos interactions, identifiants de dispositif, cookies, et intégrations de tiers pour offrir une expérience utilisateur plus fluide.",
+    "twofour":
+        "2.4 Les dispositifs et leurs interactions, tels que le type de navigateur, la version du système d’exploitation, les détails du réseau, sont continuellement surveillés pour fournir une cohérence de service à travers les plateformes.",
+    "three": "3. Le Spectre de l’Utilisation des Données",
+    "threeone":
+        "3.1 Livraison de Service : Vos données facilitent de nombreux services :",
+    "r1": "i. Inscription & Création de Profil",
+    "r2": "ii. Transactions Financières",
+    "r3": "iii. Abonnements",
+    "r4": "iv. Gestion de Compte",
+    "three2":
+        "3.2 Communication : Attendez-vous à des communications par e-mail, SMS, appels téléphoniques et notifications dans l\"application concernant les mises à jour des services, les alertes de sécurité et les consignes d\"utilisation.",
+    "three3":
+        "3.3 Publicité : Une publicité personnalisée sera élaborée en fonction de vos données, à la fois dans et hors de l\"application.",
+    "three4":
+        "3.4 Marketing : Nous pouvons utiliser les données des utilisateurs pour des promotions et des campagnes afin d\"améliorer nos offres.",
+    "three5":
+        "3.5 Support : Pour adresser et résoudre les problèmes, nous utilisons les données des utilisateurs nécessaires.",
+    "three6":
+        "3.6 Sécurité et conformité : Les données, y compris les communications des utilisateurs, sont essentielles pour les contrôles de sécurité, la prévention de la fraude et le respect des accords des utilisateurs et des politiques de confidentialité.",
+    "four": "4. Fondements juridiques pour le traitement des données",
+    "fourt":
+        "La collecte et le traitement des données personnelles respectent une ou plusieurs des bases juridiques suivantes :",
+    "l1": "Consentement de l\"utilisateur.",
+    "l2": "Obligations contractuelles.",
+    "l3": "Réglementations légales.",
+    "l4": "Intérêts légitimes de l\"organisation.",
+    "five": "5. Bastion de la sécurité des données",
+    "five1":
+        "5.1 Notre approche tripartite — technique, administrative et physique — assure que vos données restent protégées contre l\"accès non autorisé et la mauvaise gestion.",
+    "five2":
+        "5.2 Les mesures de sécurité sont omniprésentes, protégeant vos données lors de l\"entrée, de la soumission et de l\"accès.",
+    "five3":
+        "5.3 Nous utilisons des protocoles de sécurité normalisés pour la transmission, le traitement et le stockage des données.",
+    "five4":
+        "5.4 Les données critiques sont cryptées en utilisant la technologie de pointe. Seuls quelques individus avec des droits spéciaux peuvent accéder à des catégories de données spécifiques, liés par la confidentialité.",
+    "note":
+        "Note : Les changements de cette politique seront publiés sur l\"application.",
+    "policy":
+        "Pour les mises à jour de la politique, les rapports de violation de données ou les questions, contactez : info@ikanisa.com",
+    "six": "6. Partage du compas des données",
+    "six1":
+        "6.1 Pour fournir nos services, les données peuvent traverser les frontières, gérées conformément à cette politique de confidentialité.",
+    "six2":
+        "6.2 Les données transactionnelles et expérientielles peuvent être partagées au sein de notre écosystème organisationnel pour affiner les expériences des clients.",
+    "six3":
+        "6.3 Toutes les données partagées restent sous des normes de confidentialité strictes, avec des interdictions contre les divulgations non autorisées.",
+    "six4":
+        "6.4 Nous nous abstenons de partager des données avec des tiers pour des initiatives de marketing externes. Des exceptions s\"appliquent uniquement telles que permises ou nécessitées par la loi.",
+    "six5":
+        "6.5 Notre engagement à protéger vos informations reste inébranlable, même lorsqu\"elles sont transférées à travers des frontières géographiques.",
+    "seven": "7. Orientation de vos données",
+    "seven1":
+        "7.1 Rétention : Vos données restent avec nous aussi longtemps que votre compte est actif, ou selon le nécessaire pour assurer une prestation de service constante.",
+    "seven2":
+        "7.2 Accès et contrôle : Accédez à vos données via nos fonctionnalités intégrées à l\"application. Si vous souhaitez désactiver, contactez-nous à info@ikanisa.com.",
+    "seven3":
+        "7.3 Clôture : Même après la fermeture du compte, certaines données peuvent être conservées pour remplir des obligations légales ou de sécurité.",
+    "eight": "8. Protection des mineurs",
+    "nine": "9. Points de contact",
+    "ourservice":
+        "Nos services sont adaptés à un large public. Nous ne recueillons pas sciemment de données auprès des enfants de moins de 13 ans sans le consentement parental ou conformément aux lois applicables.",
+        "tandc": "Conditions Générales",
+    "tone": "1. Introduction",
+    "userName": "Identifiant",
+    "toneone":
+        "1.1 Ces Conditions Générales régissent l'utilisation de l'application mobile ICUPA (« Application »), qui offre des services de médiation financière numérique intégrés avec Ecobank. En accédant ou en utilisant cette Application, vous acceptez de respecter ces Conditions.",
+    "tonetwo":
+        "1.2 Si vous n'acceptez pas ces termes, vous êtes interdit d'accéder ou d'utiliser cette Application.",
+    "ttwo": "2. Enregistrement de l'utilisateur et Sécurité du Compte",
+    "ttwoone":
+        "2.1 Les utilisateurs doivent s'inscrire pour accéder à certaines fonctionnalités de l'Application. Cette inscription nécessite de fournir des informations exactes, actuelles et complètes conformément aux dispositions de la Loi sur la Protection du Consommateur Togolaise.",
+    "ttwotwo":
+        "2.2 Il est essentiel que les utilisateurs maintiennent la confidentialité des informations d'identification de leur compte. Tout accès non autorisé ou violation doit être signalé immédiatement à ICUPA.",
+    "ttwo2":
+        "2.3 Tous les utilisateurs d'ICUPA doivent maintenir un compte actif avec Ecobank pour accéder et utiliser tous les services sur ICUPA.",
+    "tthree": "3. Intégration avec Ecobank",
+    "tthree1":
+        "3.1 ICUPA s'est exclusivement associé à Ecobank en tant que seul fournisseur de paiement.",
+    "tthree2":
+        "3.2 Grâce à l'intégration des API ouvertes d'Ecobank, l'Application fournit des services tels que les paiements internes de banque à banque, les services de portefeuille de compte Xpress et plus encore.",
+    "tthree3":
+        "3.3 Les services numériques fournis par ICUPA incluent, mais ne se limitent pas à : les offrandes d'église numériques, les économies de groupe basées sur la communauté, les contributions à la RSE et autres causes sociales.",
+    "tfour": "4. Conformité avec les Réglementations Financières",
+    "tfour1":
+        "4.1 ICUPA assure que toutes ses transactions financières sont conformes aux Lois Bancaires de l'UEMOA, aux Réglementations Financières Nationales du Togo et aux Réglementations des Institutions de Microfinance du Togo.",
+    "tfour2":
+        "4.2 Engagé dans la lutte contre les crimes financiers, ICUPA adhère strictement aux réglementations de Lutte Contre le Blanchiment d'Argent et le Financement du Terrorisme (LCB/FT) du Togo.",
+    "tfive": "5. Protection des Données et Confidentialité",
+    "tfive1":
+        "5.1 Nous nous engageons à assurer la protection des données de nos utilisateurs. Toutes les données des utilisateurs sont traitées avec la plus grande sécurité et conformément aux réglementations sur la Protection des Données du Togo.",
+    "tfive2":
+        "5.2 Le partage de données avec Ecobank est essentiel pour la fourniture de services, mais cela se fait sous des accords de partage de données stricts qui priorisent les intérêts des utilisateurs.",
+    "tfive3":
+        "5.3 ICUPA utilise des protocoles de chiffrement et de sécurité de premier ordre pour protéger les informations des utilisateurs.",
+    "tsix": "6. Propriété Intellectuelle",
+    "tsix1":
+        "6.1 Le contenu de l'Application, y compris son design, ses graphiques et son contenu textuel, sont la propriété intellectuelle d'ICUPA ou de ses concédants de licence. L'utilisation non autorisée, la reproduction ou la distribution de ce contenu est strictement interdite.",
+    "tseven": "7. Responsabilités et Conduite de l'Utilisateur",
+    "tseven1":
+        "7.1 Les utilisateurs doivent s'assurer de l'exactitude des détails de transaction qu'ils saisissent, y compris les détails du destinataire, le montant et le but.",
+    "tseven2":
+        "7.2 Les utilisateurs ne doivent pas abuser des services de numérisation fournis. Toute activité suspecte peut entraîner la suspension du compte.",
+    "tseven3":
+        "7.3 Les utilisateurs doivent s'abstenir de toute activité malveillante qui pourrait nuire aux opérations de l'Application ou à d'autres utilisateurs.",
+    "teight": "8. Limitation de Responsabilité",
+    "teight1":
+        "8.1 Bien qu'ICUPA assure la précision de ses services, elle ne sera pas tenue responsable des erreurs de transaction résultant d'erreurs des utilisateurs.",
+    "teight2":
+        "8.2 L'opération d'ICUPA repose sur des services tiers, tels que l'API d'Ecobank. Par conséquent, ICUPA ne peut garantir un service ininterrompu et n'est pas responsable des interruptions dues à des temps d'arrêt de tiers.",
+    "tnine": "9. Protection du Consommateur",
+    "tnine1":
+        "9.1 ICUPA se conforme pleinement à la Loi sur la Protection du Consommateur Togolaise. Toute disparité entre les services promis et ceux fournis peut être légalement abordée.",
+    "tten": "10. Modifications des Termes",
+    "tten1":
+        "10.1 ICUPA se réserve le droit de mettre à jour ou de modifier périodiquement ces Termes. Les utilisateurs seront informés de tout changement, et leur utilisation continue de l'Application après notification sera considérée comme une acceptation des Termes révisés.",
+    "televen": "11. Loi Applicable et Juridiction",
+    "televen1":
+        "11.1 Ces Termes sont régis par et interprétés conformément aux lois togolaises. Tout litige découlant de ou en relation avec les services d'ICUPA sera soumis à la juridiction des tribunaux du Togo.",
+    "ttwelve": "12. Coordonnées",
+    "tqueries":
+        "Pour toute question, plainte ou retour, les utilisateurs peuvent contacter : info@ikanisa.com",
+    "failInitialize": "Échec de l'initialisation de l'application ! \nDescendez pour réessayer.",
+    "networkIssue": "Problème de connexion! \nEssayer à nouveau.",
+    "closeA": "Fermer le Compte",
+    "closeQ": "Êtes-vous sûr de vouloir supprimer votre compte ?",
+    "closeP": "Une fois votre compte supprimé, toutes vos données seront définitivement effacées et vous ne pourrez plus accéder à vos informations sur ICUPA.",
+    "enableLocation": "🔔 Activer le Partage de Position",
+    "enableLocationMessage": "Pour une meilleure expérience avec ICUPA, veuillez activer le partage de position dans les paramètres de l'application. Cela nous permet de vous montrer les bars et restaurants à proximité et de vous offrir les meilleures recommandations.",
+    "openSettings": "Ouvrez Paramètres",
+    "goToLocation": "Allez à Localisation",
+    "turnOnLocation": "Activez Services de localisation",
+    "goToSettings": "Aller aux Paramètres",
+    "tryAgain": "Réessayer",
+    "howToEnable": "Comment activer:",
+    "orderStatusUpdated": "Mises à Jour du Statut de la Commande",
+    "orderBeingPrepared": "Votre commande {orderId} a été confirmée et est en cours de préparation.",
+    "@orderBeingPrepared": {
+        "description": "Order Preparation",
+        "placeholders": {
+            "orderId": {
+                "type": "String",
+                "description": "Order id"
+            }
+        }
+    },
+    "orderServed": "Votre commande {orderId} a été servie !",
+    "@orderServed": {
+        "description": "Order served",
+        "placeholders": {
+            "orderId": {
+                "type": "String",
+                "description": "Order id"
+            }
+        }
+    },
+    "orderRejected": "Rejet de Commande",
+    "orderRejectedQ": "Malheureusement, votre commande {orderId} a été rejetée pour la raison suivante : {reason}. Veuillez essayer de commander un autre article.",
+    "@orderRejectedQ": {
+        "description": "Order rejected",
+        "placeholders": {
+            "orderId": {
+                "type": "String",
+                "description": "Order id"
+            },
+            "reason": {
+                "type": "String",
+                "description": "Order id"
+            }
+        }
+    },
+    "notifications": "Notifications",
+    "noNotification": "Pas notification",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "clearAll": "Tout effacer"
+}

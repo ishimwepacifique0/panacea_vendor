@@ -1,0 +1,11 @@
+{
+  "fr": [
+    "bodyMedium",
+    "allowLocation",
+    "pressContinue",
+    "deliveryPartnerCustomer",
+    "cop",
+    "freeDelivery",
+    "enterEmail"
+  ]
+}

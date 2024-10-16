@@ -1,0 +1,434 @@
+{
+    "@@locale": "en",
+    "validphone": "Enter a valid phone number",
+    "searchCountry": "Search country",
+    "invalidPhoneNumber": "Invalid Mobile Number",
+    "enterOtpCode": "Enter OTP Code",
+    "veg": "Veg",
+    "nonVeg": "Non-Veg",
+    "customize": "Customise",
+    "stater": "Starter",
+    "mainCourse": "Main Course",
+    "burger": "Veg Burger",
+    "fast": "FAST FOOD",
+    "sea": "SEA FOOD",
+    "chinese": "CHINESE",
+    "desert": "DESERT",
+    "sandwich": "Veg Sandwich",
+    "chicken": "Fried Chicken",
+    "juice": "Watermelon Juice",
+    "cheese": "Extra Cheese",
+    "type": "Fast Food, Italian, Chinese",
+    "storeAddress": "City Food Park",
+    "store": "Food Junction",
+    "storeFound": "Restaurants Found",
+    "lightMode": "Light Mode",
+    "lightText": "Experience an exciting light mode",
+    "accepted": "Accepted",
+    "submit": "Submit",
+    "outStock": "Out of Stock",
+    "setLocation": "Set delivery location",
+    "enterLocation": "Enter location",
+    "review": "My Reviews",
+    "hey": "Hey Samantha,\n\nYou’re almost in. \nProvide your phone number \nfor verification.",
+    "name1": "George Timber",
+    "name2": "Emili Johnson",
+    "content1": "Awesome food taste as well as quick delivery service.  Really appreciate the packing and quality of food delivered. Go for it !!",
+    "content2": "Quick delivery service & Really good  taste of food.  Really appreciate the packing and quality of food delivered. Must order Chicken Curry.",
+    "language": "Select Language",
+    "display": "Select Mode",
+    "darkMode": "Dark Mode",
+    "darkText": "Experience an exciting dark mode",
+    "settings": "Settings",
+    "or": "Or",
+    "continueWith": "Continue With ",
+    "facebook": "Facebook",
+    "google": "Google",
+    "apple": "Apple",
+    "invalidNumber": "Invalid Number",
+    "networkError": "Network Error",
+    "bodyLarge": "Delivering almost",
+    "bodyMedium": "Everything.",
+    "mobileText": "Enter mobile number",
+    "continueText": "Continue",
+    "register": "Register",
+    "invalidName": "Invalid Name",
+    "invalidEmail": "Invalid Email",
+    "invalidNameAndEmail": "Invalid Name and Email",
+    "fullName": "Name of Bar",
+    "emailAddress": "Email Address",
+    "mobileNumber": "Mobile Number",
+    "verificationText": "We'll send verification code on above given number.",
+    "verification": "Verification",
+    "checkNetwork": "Check your network or phone number entered",
+    "invalidOTP": "Invalid OTP",
+    "enterVerification": "Enter verification code we've sent on given number.",
+    "verificationCode": "ENTER VERIFICATION CODE",
+    "resend": "Resend",
+    "offlineText": "You're Offline",
+    "onlineText": "You're Online",
+    "goOnline": "GO ONLINE",
+    "goOffline": "GO OFFLINE",
+    "orders": "Orders",
+    "newOrder": "NEW ORDERS",
+    "pastOrder": "PAST ORDERS",
+    "itemSold": "Items Sold",
+    "items": "Items",
+    "earnings": "Earnings",
+    "location": "Location permission denied!\nGrant the location to the app.",
+    "grant": "Grant",
+    "homeText": "Home",
+    "account": "My Account",
+    "orderText": "My Orders",
+    "insight": "Insight",
+    "wallet": "Wallet",
+    "tnc": "Terms & Conditions",
+    "pnp": "Privacy & Policy",
+    "support": "Support",
+    "aboutUs": "About Us",
+    "logout": "Logout",
+    "login": "Login",
+    "loggingOut": "Logging Out",
+    "areYouSure": "Are you sure?",
+    "yes": "Yes",
+    "no": "No",
+    "heyThere": "Hey there?\nHow much time?",
+    "onMyWay": "On my way ma'am.\nWill reach in 10 mins",
+    "sendToBank": "Send to Bank",
+    "availableBalance": "Available Balance",
+    "bankInfo": "Bank Info",
+    "accountHolderName": "Account Holder Name",
+    "bankName": "Bank Name",
+    "branchCode": "Branch Code",
+    "accountNumber": "Account Number",
+    "enterAmountToTransfer": "Enter amount to transfer",
+    "aboutDelivoo": "About Delivoo",
+    "aboutBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar porta sagittis. Sed id varius magna. Etiam felis neque, gravida vitae elementum non, consequat eu odio. Mauris cursus commodo nisi sed imperdiet. Fusce vitae vehicula ipsum, ut commodo lorem. Praesent interdum blandit condimentum. Curabitur vel orci vitae odio congue facilisis eget eget diam.\n\nNam a arcu efficitur, ornare leo eu, euismod leo. Vestibulum porttitor varius leo, eget posuere felis congue vel. Sed sit amet erat quam. Mauris et ex sapien. Sed venenatis, felis sed eleifend vulputate, mauris libero pretium urna, non hendrerit urna quam vitae justo. Maecenas rhoncus lectus consectetur eros pretium feugiat.",
+    "ourVision": "Our Vision",
+    "companyPolicy": "Company Policy",
+    "termsOfUse": "Terms of Use",
+    "message": "Your Message",
+    "enterMessage": "Type your message",
+    "orWrite": "Or Write us your queries",
+    "yourWords": "Your words means a lot to us.",
+    "online": "Online",
+    "recent": "Recent",
+    "vegetable": "Vegetables & Fruits",
+    "today": "Today",
+    "viewAll": "View all Transactions",
+    "editProfile": "Edit Profile",
+    "featureImage": "Feature Image",
+    "uploadPhoto": "Upload Photo",
+    "profileInfo": "Restaurant Info",
+    "gender": "Gender",
+    "updateInfo": "Update Info",
+    "instruction": "Keep tomatoes in separate bag please.",
+    "cod": "Cash on Delivery",
+    "viewOrderInfo": "View Order Info",
+    "ready": "Mark as Ready",
+    "storeText": "Union Market",
+    "storeProfile": "\nStore Profile",
+    "tomato": "Fresh Red Tomatoes",
+    "onion": "Fresh Red Onions",
+    "fingers": "Fresh Lady Fingers",
+    "top": "TOP 5 SELLING ITEMS\n",
+    "total": "Total 112 item sales",
+    "sales": "Sales",
+    "vegetables": "VEGETABLES",
+    "fruits": "FRUITS",
+    "herbs": "HERBS",
+    "dairy": "DAIRY",
+    "deliveryPartner": "Delivery Partner Assigned",
+    "category": "Category",
+    "address": "Address",
+    "storeTimings": "Restaurant Timings",
+    "openingTime": "Opening Time",
+    "closingTime": "Closing Time",
+    "product": "Drinks",
+    "stock": "In Stock",
+    "pending": "Pending",
+    "item": "ITEM(S)",
+    "sub": "Sub Total",
+    "service": "Service Fee",
+    "payment": "Payment Info",
+    "add": "Add Product",
+    "edit": "Edit",
+    "info": "ITEM INFO",
+    "title": "ITEM TITLE",
+    "enterTitle": "Enter Item Name",
+    "itemCategory": "ITEM CATEGORY",
+    "selectCategory": "Select Item Category",
+    "price": "Price",
+    "enterPrice": "Enter price",
+    "quantity": "PRICE",
+    "orderNumber": "Order Num",
+    "enterQuantity": "Enter Quantity",
+    "addMore": "+ ADD MORE OPTIONS",
+    "image": "Item Image",
+    "cropImage": "Crop Image",
+    "itemsFound": "Items Found",
+    "welcomeToICUPA": "Welcome to Icupa Vendor",
+    "whatsappSignUp": "Sign Up with WhatsApp",
+    "whatsappNo": "WhatsApp Number",
+    "completed": "Completed",
+    "categoryText": "Category",
+    "addProduct": "Add Product",
+    "preferredDrivers": "Preferred Drivers",
+    "driverFound": "Drivers Found",
+    "driversCanPreferred": "Drivers you can Preferred",
+    "alreadyAddedDrivers": "No Drivers Available!",
+    "editAndRemove": "Edit And Remove",
+    "remove": "Remove",
+    "wantAddProduct": "Do you want to add this product",
+    "editORDelete": "Edit or Delete this Item",
+    "uploadImage": "Upload Image",
+    "uploadProduct": "Upload Product",
+    "allowLocation": "Allow Permission Location!",
+    "pressContinue": "Press Here to Continue    >",
+    "deliveryPartnerCustomer": "Customer Picked Order Itself",
+    "cop": "Cash on pick up",
+    "freeDelivery": "Allow Free Deliver",
+    "noOrder": "No Orders Found!",
+    "beingPrepared": "Being prepared",
+    "served": "served",
+    "confirmOrder": "Confirm Order",
+    "confirmOrderBody": "Do you want to confirm this order?",
+    "confirm": "Confirm",
+    "reject": "Reject",
+    "cancel": "Cancel",
+    "rejected": "Rejected",
+    "rejectOrder": "Reject Order",
+    "rejectOrderBody": "Do you want to reject this order?",
+    "markServed": "Mark as Served",
+    "markServedBody": "Are you sure you want to mark this order as served?",
+    "outOfStock": "Out of stock",
+    "otherReason": "Other reason",
+    "tableNO": "Table No",
+    "tip": "Tip",
+    "update": "Update",
+    "searchHere": "Search here",
+    "tMoneyAccount": "Tmoney Account",
+    "mMoneyAccount": "MoMo Account",
+    "tMoneycode": "TMoney Code",
+    "mMoneycode": "MoMo Code",
+    "mobileAccount": "{mobile} Account",
+    "@mobileAccount": {
+        "description": "Mobile Account",
+        "placeholders": {
+            "mobile": {
+                "type": "String",
+                "description": "Mobile name"
+            }
+        }
+    },
+    "mobileCode": "{code} Code",
+    "@mobileCode": {
+        "description": "Mobile Code",
+        "placeholders": {
+            "code": {
+                "type": "String",
+                "description": "Mobile code"
+            }
+        }
+    },
+    "barAddress": "Bar Address",
+    "barProfile": "Bar Profile",
+    "activateStore": "Activate store",
+    "enterEmail": "Enter email address",
+    "selectLanguage": "Select Language",
+    "privacy": "ICUPA’s Privacy Policy",
+    "lastupdate": "Last Updated: 5th September 2023",
+    "important": "Important",
+    "sub_":
+        "In an era defined by the digital revolution, safeguarding user privacy stands as a beacon of trust. As stewards of your data, we appreciate the trust you instill in our technology. This Privacy Notice elucidates how we collect, utilize, and protect your personal information while interacting with our Mobile App.",
+    "one": "1. The Bedrock of Our Privacy Commitment",
+    "oneone":
+        "1.1 Privacy and the security of your personal data is paramount to us. We believe in transparently communicating our data handling practices to reinforce the confidence you have in our services.",
+    "onetwo":
+        "1.2 Information collected will solely be used for the purposes declared herein, and we pledge to abide by the following principles:",
+    "lione":
+        "Obtain explicit permission before collecting, transferring, or processing your personal data unless mandated by law.",
+    "litwo":
+        "Obtain explicit permission before collecting, transferring, or processing your personal data unless mandated by law.",
+    "lithree":
+        "Restrict our use of your data to the purposes you\"ve been informed of, unless we gain further consent or are legally obligated to do otherwise.",
+    "two": "2. Data Collection Landscape",
+    "twoone":
+        "2.1 On registering with our app, we may gather basic identifiers: name, email, phone number, date of birth, residential address, and more, depending on your registration preferences.",
+    "twotwo":
+        "2.2 For enhanced functionalities, we might require details such as your banking credentials, card details, and device specifics.",
+    "twothree":
+        "2.3 Our system aggregates data from your interactions, device IDs, cookies, and third-party integrations to offer a more seamless user experience.",
+    "twofour":
+        "2.4 Devices and their interactions—such as browser type, OS version, network details—are continually monitored to provide service consistency across platforms.",
+    "three": "3. The Spectrum of Data Use",
+    "threeone":
+        "3.1 Service Delivery: Your data facilitates numerous services:",
+    "r1": "i. Registration & Profile Creation",
+    "r2": "ii. Financial Transactions",
+    "r3": "iii. Subscriptions",
+    "r4": "iv. Account Management",
+    "three2":
+        "3.2 Communication: Expect communications via email, SMS, phone calls, and in-app notifications about service updates, security alerts, and usage guidelines.",
+    "three3":
+        "3.3 Advertising: Personalized advertising will be curated based on your data, both within and outside the app.",
+    "three4":
+        "3.4 Marketing: We may harness user data for promotions and campaigns to elevate our offerings.",
+    "three5":
+        "3.5 Support: To address and resolve concerns, we leverage necessary user data.",
+    "three6":
+        "3.6 Security & Compliance: Data, inclusive of user communications, is essential for security checks, fraud prevention, and adhering to user agreements and privacy policies.",
+    "four": "4. Legal Cornerstones for Data Processing",
+    "fourt":
+        "The collection and processing of personal data abide by one or multiple of the following legal foundations:",
+    "l1": "User consent.",
+    "l2": "Contractual obligations.",
+    "l3": "Statutory regulations.",
+    "l4": "Legitimate organizational interests.",
+    "five": "5. The Bastion of Data Security",
+    "five1":
+        "5.1 Our tri-fold approach—technical, administrative, and physical—ensures your data remains shielded from unauthorized access and mishandling.",
+    "five2":
+        "5.2 Security measures are omnipresent, safeguarding your data during entry, submission, and access.",
+    "five3":
+        "5.3 We utilize standardized security protocols for data transmission, processing, and storage.",
+    "five4":
+        "5.4 Critical data is encrypted using state-of-the-art technology. Only a select few with special rights can access specific data categories, bound by confidentiality.",
+    "note": "Note: Changes to this policy will be posted on the app.",
+    "policy":
+        "For policy updates, data breach reports, or queries, reach out: info@ikanisa.com",
+    "six": "6. Sharing the Data Compass",
+    "six1":
+        "6.1 To deliver our services, data might traverse across borders, managed in accordance with this Privacy Policy.",
+    "six2":
+        "6.2 Transactional and experiential data may be shared within our organizational ecosystem to refine customer experiences.",
+    "six3":
+        "6.3 All shared data remains under stringent privacy norms, with prohibitions against unauthorized disclosures.",
+    "six4":
+        "6.4 We refrain from sharing data with third parties for external marketing endeavors. Exceptions apply only as permitted or necessitated by law.",
+    "six5":
+        "6.5 Our commitment to safeguarding your information remains unwavering, even when transferred across geographical boundaries.",
+    "seven": "7. Steering Your Data",
+    "seven1":
+        "7.1 Retention: Your data remains with us as long as your account is active, or as required to ensure consistent service delivery.",
+    "seven2":
+        "7.2 Access & Control: Access your data through our in-app features. Should you wish to deactivate, contact us at info@ikanisa.com.",
+    "seven3":
+        "7.3 Closure: Even post account closure, certain data might be retained to fulfill legal or security obligations.",
+    "eight": "8. Safeguarding Minors",
+    "nine": "9. Touchpoints",
+    "ourservice":
+        "Our services are tailored for a broad audience. We don't knowingly gather data from children under 13 without parental consent or as consistent with applicable laws.",
+        "tandc": "Terms and Conditions",
+    "tone": "1. Introduction",
+    "toneone":
+        "1.1.   These Terms and Conditions govern the use of the ICUPA Mobile App (“App”), which offers digital financial intermediation services integrated with Ecobank. By accessing or using this App, you agree to abide by these Terms",
+    "tonetwo":
+        "1.2.   If you do not agree with any of these terms, you are prohibited from accessing or using this App.",
+    "ttwo": "2. User Registration and Account Security",
+    "ttwoone":
+        "2.1. Users are required to register to access certain features of the App. This registration requires you to provide accurate, current, and complete information as per the provisions of the Togolese Consumer Protection Law.",
+    "ttwotwo":
+        "2.2. It is essential for users to maintain the confidentiality of their account credentials. Any unauthorized access or breach should be reported to ICUPA immediately.",
+    "ttwo2":
+        "2.3. All ICUPA users must maintain an active account with Ecobank to access and utilize all services on ICUPA.",
+    "tthree": "3. Integration with Ecobank",
+    "tthree1":
+        "3.1. ICUPA has exclusively partnered with Ecobank as its sole payment provider.",
+    "tthree2":
+        "3.2. Through the integration of Ecobank's open APIs, the App provides services such as internal bank-to-bank payments, Xpress account wallet services, and more.",
+    "tthree3":
+        "3.3. Digital services provided by ICUPA include but are not limited to: digital church offerings, community-based group savings, CSR and other social cause contributions.",
+    "tfour": "4. Compliance with Financial Regulations",
+    "tfour1":
+        "4.1. ICUPA ensures that all its financial transactions comply with the WAEMU Banking Laws, Togo’s National Financial Regulations, and the Microfinance Institutions Regulations of Togo.",
+    "tfour2":
+        "4.2. Committed to the fight against financial crimes, ICUPA strictly adheres to the Anti-Money Laundering and Countering Financing of Terrorism (AML/CFT) regulations of Togo.",
+    "tfive": "5. Data Protection and Privacy",
+    "tfive1":
+        "5.1. We are committed to ensuring the protection of our users' data. All user data is processed with the utmost security, and in alignment with Togo’s Data Protection regulations.",
+    "tfive2":
+        "5.2. Data sharing with Ecobank is essential for service provision, but this is done under strict data-sharing agreements which prioritize user interests.",
+    "tfive3":
+        "5.3. ICUPA utilizes top-tier encryption and security protocols to safeguard user information.",
+    "tsix": "6. Intellectual Property",
+    "tsix1":
+        "6.1. The App's content, including its design, graphics, and textual content, are the intellectual property of ICUPA or its licensors. Unauthorized use, reproduction, or distribution of this content is strictly prohibited.",
+    "tseven": "7. User Responsibilities and Conduct",
+    "tseven1":
+        "7.1. Users must ensure the accuracy of transaction details they input, including details of the recipient, amount, and purpose.",
+    "tseven2":
+        "7.2. Users should not misuse the digitizing services provided. Any suspicious activities might lead to account suspension.",
+    "tseven3":
+        "7.3. Users must refrain from any malicious activity that could harm the App\"s operations or other users.",
+    "teight": "8. Limitation of Liability",
+    "teight1":
+        "8.1. While ICUPA ensures the precision of its services, it will not be held responsible for transaction errors resulting from user mistakes.",
+    "teight2":
+        "8.2. ICUPA\"s operation relies on third-party services, such as Ecobank\"s API. Therefore, ICUPA cannot guarantee uninterrupted service and is not responsible for any disruptions due to third-party downtimes.",
+    "tnine": "9. Consumer Protection",
+    "tnine1":
+        "9.1. ICUPA fully complies with the Togolese Consumer Protection Law. Any disparities between services promised and those delivered can be legally addressed.",
+    "tten": "10. Modifications to the Terms",
+    "tten1":
+        "10.1. ICUPA retains the right to update or change these Terms periodically. Users will be intimated of any such changes, and their continued use of the App post-notification will be deemed as acceptance of the revised Terms.",
+    "televen": "11. Governing Law and Jurisdiction",
+    "televen1":
+        "11.1. These Terms are governed by and interpreted in accordance with Togolese laws. Any disputes arising out of or in connection with ICUPA’s services will be subject to the jurisdiction of Togo’s courts.",
+    "ttwelve": "12. Contact Information",
+    "tqueries":
+        "For any queries, complaints, or feedback, users can contact: info@ikanisa.com",
+    "failInitialize": "Fail to initialize the app! \n Pull down to try again.",
+    "networkIssue": "Connection issue! \nTry again.",
+    "closeA": "Close Account",
+    "closeQ": "Are you sure you want to delete your account?",
+    "closeP": "Once you delete your account, all your data will be permanently deleted, and you will no longer be able to access your information on ICUPA.",
+    "enableLocation": "🔔 Enable Location Sharing",
+    "enableLocationMessage": "For the best experience with ICUPA, please enable location sharing in your app settings. This allows us to show you nearby bars and restaurants and offer the best recommendations.",
+    "openSettings": "Open Settings",
+    "goToLocation": "Go to Location",
+    "turnOnLocation": "Turn on Location Services",
+    "goToSettings": "Go to Settings",
+    "tryAgain": "Try Again",
+    "howToEnable": "How to enable:",
+    "orderStatusUpdated": "Order Status Updates",
+    "orderBeingPrepared": "Your order {orderId} has been confirmed and is now being prepared.",
+    "@orderBeingPrepared": {
+        "description": "Order Preparation",
+        "placeholders": {
+            "orderId": {
+                "type": "String",
+                "description": "Order id"
+            }
+        }
+    },
+    "orderServed": "Your order {orderId} has been served!",
+    "@orderServed": {
+        "description": "Order served",
+        "placeholders": {
+            "orderId": {
+                "type": "String",
+                "description": "Order id"
+            }
+        }
+    },
+    "orderRejected": "Order Rejection",
+    "orderRejectedQ": "Unfortunately, your order {orderId} was rejected due to {reason}. Please try ordering another item.",
+    "@orderRejectedQ": {
+        "description": "Order rejected",
+        "placeholders": {
+            "orderId": {
+                "type": "String",
+                "description": "Order id"
+            },
+            "reason": {
+                "type": "String",
+                "description": "Order id"
+            }
+        }
+    },
+    "notifications": "Notifications",
+    "noNotification": "No notification",
+    "yesterday": "Yesterday",
+    "clearAll": "Clear All"
+}
