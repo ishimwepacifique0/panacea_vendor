@@ -47,20 +47,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCkHmmH1WT55qp9NPN08B5skG8ET8OxWEQ',
-    appId: '1:49459051581:android:516910885314a049107e54',
-    messagingSenderId: '49459051581',
-    projectId: 'icupa-396da',
-    storageBucket: 'icupa-396da.appspot.com',
+    apiKey: 'AIzaSyCAw3Uapngc4IuswkLAhcFgtDlLjpqJVY8',
+    appId: '1:498351091702:android:a006743cd2a9c88f67e1d7',
+    messagingSenderId: '498351091702',
+    projectId: 'madein-a5f78',
+    storageBucket: 'madein-a5f78.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAqa8ql4jBq5zj8VxW8l84nvZ_Ak_1ccew',
-    appId: '1:49459051581:ios:53ae7e3d00afb419107e54',
-    messagingSenderId: '49459051581',
-    projectId: 'icupa-396da',
-    storageBucket: 'icupa-396da.appspot.com',
-    iosBundleId: 'com.emateli.vendor',
+    apiKey: 'AIzaSyBX-OsDNv0-JUsZnNtLua3Mf6ubwXMOBHY',
+    appId: '1:498351091702:ios:5f6c5084cb3e58a767e1d7',
+    messagingSenderId: '498351091702',
+    projectId: 'madein-a5f78',
+    storageBucket: 'madein-a5f78.appspot.com',
+    iosBundleId: 'com.madein.vendor',
   );
 
   static const FirebaseOptions web = FirebaseOptions(
@@ -72,5 +72,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'icupa-396da.appspot.com',
     measurementId: 'G-D80RPNQVCZ',
   );
-
 }
