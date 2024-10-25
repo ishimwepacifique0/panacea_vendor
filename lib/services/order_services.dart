@@ -9,6 +9,7 @@ class OrderServices {
 
   static final ordersStream =
       StreamProvider.family<List<UserOrder>, String>((ref, id) {
+
     return fireStore
         .collection(collection)
         .where('vendor', isEqualTo: id)

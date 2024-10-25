@@ -70,7 +70,7 @@ class ProductWidget extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                product.name,
+                product.productName[locale.localeName],
                 style: Theme.of(context).textTheme.displayMedium!.copyWith(
                       fontSize: 16,
                       fontWeight: FontWeight.w400,

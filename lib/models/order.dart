@@ -1,5 +1,5 @@
 class UserOrder {
-  String id, user, vendor, phone, table, orderId;
+  String id, user, vendor, phone, orderId;
   int amount;
   int? tip;
   String? reason;
@@ -15,7 +15,6 @@ class UserOrder {
     this.tip,
     this.reason,
     required this.phone,
-    required this.table,
     required this.orderId,
     required this.products,
     required this.paid,
@@ -34,7 +33,6 @@ class UserOrder {
       tip: map['tip'],
       reason: map['reason'],
       phone: map['phone'],
-      table: map['table'],
       orderId: map['orderId'],
       products: map['products'],
       paid: map['paid'],

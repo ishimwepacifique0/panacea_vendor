@@ -2,6 +2,7 @@ import 'package:animation_wrappers/animations/faded_scale_animation.dart';
 import 'package:animation_wrappers/animations/faded_slide_animation.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:icupa_vendor/constants.dart';
@@ -49,9 +50,8 @@ class Products extends ConsumerWidget {
 
     final categoryIds = storeProducts
         .map((e) {
-          return {...e.product.categories};
+          return e.product.category;
         })
-        .expand((e) => e)
         .toSet()
         .toList();
     final tabCategories = categoryStream.isLoading
@@ -59,6 +59,7 @@ class Products extends ConsumerWidget {
         : categoryIds.map((e) {
             return categories.firstWhere((c) => c.id == e);
           }).toList();
+          
     final categoryKeys = tabCategories.map((e) {
       return GlobalKey();
     }).toList();
@@ -175,7 +176,7 @@ class Products extends ConsumerWidget {
                       final category = tabCategories[index];
                       final key = categoryKeys[index];
                       final products = storeProducts.where(((sp) {
-                        return sp.product.categories.contains(category.id);
+                        return sp.product.category.contains(category.id);
                       })).toList();
                       return Column(
                         key: key,
@@ -210,6 +211,7 @@ class Products extends ConsumerWidget {
                                   products,
                                   orders,
                                   region,
+                                  locale.localeName
                                 ),
                                 Divider(
                                   color: Theme.of(context).cardColor,
@@ -256,6 +258,8 @@ class Products extends ConsumerWidget {
     List<StoreProduct> products,
     List<UserOrder> orders,
     Region region,
+    String locale
+    
   ) {
     return products.map((product) {
       final productOrders = orders.where((e) {
@@ -305,7 +309,7 @@ class Products extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    product.product.name,
+                    product.product.productName[locale],
                     style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           fontSize: 15.0,
                           fontWeight: FontWeight.w500,
@@ -362,6 +366,10 @@ class Products extends ConsumerWidget {
     TextEditingController amountController = TextEditingController(
       text: formatPrice(product.vendorProduct.price),
     );
+    TextEditingController quantityController = TextEditingController(
+  text: product.vendorProduct.quantity != null ? product.vendorProduct.quantity.toString() : '',
+);
+
     return showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -372,7 +380,7 @@ class Products extends ConsumerWidget {
             style: const TextStyle(fontSize: 17.0),
           ),
           content: SizedBox(
-            height: 100,
+            height: 130,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -381,12 +389,28 @@ class Products extends ConsumerWidget {
                   keyboardType: TextInputType.number,
                   controller: amountController,
                   cursorColor: kMainColor,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
                   onChanged: (value) {
                     handlePriceChange(value, amountController);
                   },
                   decoration: inputDecorationWithLabel(
                     locale.enterPrice,
                     locale.price,
+                  ),
+                ),
+                const SizedBox(height: 10.0),
+                 TextField(
+                  keyboardType: TextInputType.number,
+                  controller: quantityController,
+                  cursorColor: kMainColor,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
+                  decoration: inputDecorationWithLabel(
+                    "Enter quantity",
+                    "Quantity",
                   ),
                 )
               ],
@@ -397,10 +421,12 @@ class Products extends ConsumerWidget {
               onPressed: () {
                 String amount = amountController.text.replaceAll(',', '');
                 bool isValid = amount.isNotEmpty;
+                String quantity = quantityController.text;
                 if (isValid) {
                   ProductServices.updateProduct(
                     {
                       'price': int.parse(amount),
+                      'quantity': int.parse(quantity)
                     },
                     product.vendorProduct.id,
                   );

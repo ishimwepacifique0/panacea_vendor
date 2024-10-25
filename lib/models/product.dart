@@ -1,56 +1,58 @@
 class Product {
-  String id, name, origin, image, productClass;
-  List<dynamic> images;
-  Map<String, dynamic> description, ingredients, type;
-  String? bottleSize, alcoholPercentage;
+  String id;
+  Map<String, dynamic> productName;
+  Map<String, dynamic> country;
+  String category;
+  List<dynamic> tags;
+  String image;
   bool isActive;
-  List<dynamic> categories;
 
   Product({
     required this.id,
-    required this.categories,
-    required this.name,
+    required this.productName,
+    required this.category,
     required this.image,
-    required this.productClass,
-    required this.images,
-    required this.description,
-    required this.ingredients,
-    required this.type,
-    required this.origin,
+    required this.tags,
+    required this.country,
     required this.isActive,
-    this.bottleSize,
-    this.alcoholPercentage,
   });
+
+  static Map<String, dynamic> castToMap(dynamic value) {
+    if (value is String) {
+      return {}; 
+    } else if (value is Map<String, dynamic>) {
+      return value;
+    } else {
+      return {};
+    }
+  }
 
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
       id: json['id'],
-      categories: json['categories'],
-      name: json['name'],
-      image: json['image'] ?? '',
-      productClass: json['class'],
-      images: json['images'] ?? [],
-      description: json['description'],
-      ingredients: json['ingredients'],
-      type: json['type'],
-      origin: json['origin'],
-      bottleSize: json['bottleSize'],
-      alcoholPercentage: json['alcoholPercentage'],
-      isActive: json['active'],
+      productName: castToMap(json['productName']),  
+      country: castToMap(json['country']),
+      category: json['category'] ?? '',                      
+      image: json['image'] ?? '', 
+      tags: json['tags'] ?? [],  
+      isActive: json['isActive'] ?? false,               
     );
   }
 }
 
+
 class VendorProduct {
-  String id, product, vendor;
-  int price, stock;
+  String id, product, store ,category;
+  int price;
   DateTime createdOn;
+  int? quantity;
   VendorProduct({
     required this.id,
     required this.product,
-    required this.vendor,
+    required this.store,
+    required this.category, 
     required this.price,
-    required this.stock,
+    this.quantity,
     required this.createdOn,
   });
 
@@ -58,9 +60,10 @@ class VendorProduct {
     return VendorProduct(
       id: json['id'],
       product: json['product'],
-      vendor: json['vendor'],
+      store: json['store'],
+      category: json['category'], 
       price: json['price'],
-      stock: json['stock'],
+      quantity: json['quantity'] ?? 0,
       createdOn: json['createdOn'].toDate(),
     );
   }
@@ -78,9 +81,9 @@ class StoreProduct {
 
 class NewProduct {
   String product;
-  List<dynamic> categories;
-  int stock, price;
-  NewProduct(this.product, this.categories, this.stock, this.price);
+  String category;
+  int price, quantity;
+  NewProduct(this.product, this.category,this.price, this.quantity);
 }
 
 class ProductClass {

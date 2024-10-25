@@ -17,10 +17,10 @@ class Home extends ConsumerWidget {
     final locale = AppLocalizations.of(context)!;
     final vendor = ref.watch(vendorProvider)!;
     final ordersStream = ref.watch(OrderServices.ordersStream(vendor.id));
-    final notificationsStream =
-        ref.watch(NotificationService.userNotificationStream);
+    final notificationsStream = ref.watch(NotificationService.userNotificationStream);
 
     final orders = ordersStream.value ?? [];
+
     orders.sort((a, b) => b.date.compareTo(a.date));
     final List<Tab> tabs = <Tab>[
       Tab(text: locale.newOrder),
@@ -31,7 +31,7 @@ class Home extends ConsumerWidget {
         .where((e) {
           return !e.isRead;
         })
-        .toList()
+        .toList() 
         .isNotEmpty;
     return DefaultTabController(
       length: tabs.length,
@@ -106,12 +106,12 @@ class Home extends ConsumerWidget {
         body: TabBarView(
           children: [
             Orders(
-              orders: orders.where((e) {
+              orders: (orders).where((e) {
                 return !e.served && !e.rejected;
               }).toList(),
             ),
             Orders(
-              orders: orders.where((e) {
+              orders: (orders).where((e) {
                 return e.served || e.rejected;
               }).toList(),
             ),

@@ -3,7 +3,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:icupa_vendor/models/category.dart';
 import 'package:icupa_vendor/models/product.dart';
+import 'package:icupa_vendor/services/category_service.dart';
 import 'package:icupa_vendor/services/product_services.dart';
 import 'package:icupa_vendor/shared/shared_states.dart';
 import 'package:icupa_vendor/shared/widgets/bottom_bar.dart';
@@ -26,15 +28,22 @@ class AddProductsState extends ConsumerState<AddProducts> {
   bool isLoading = false;
   String? selectedVendor;
   int activeTab = 0;
+  List<Category> tabCategories = [];
+  List<Widget> productBuilders = [];
 
   void handleClick(Product product, bool isSelected, NewProduct? data) {
     showActionDialogBox(
       !isSelected,
-      (price) {
+      (price, quantity) {
         setState(() {
           selectedProducts = [
             ...selectedProducts,
-            NewProduct(product.id, product.categories, 0, price),
+            NewProduct(
+              product.id,
+              product.category,
+              price,
+              quantity,
+            ),
           ];
         });
       },
@@ -45,11 +54,16 @@ class AddProductsState extends ConsumerState<AddProducts> {
           }).toList();
         });
       },
-      (price) {
+      (price, quantity) {
         setState(() {
           selectedProducts = selectedProducts.map((e) {
             if (e.product == data?.product) {
-              return NewProduct(product.id, product.categories, 0, price);
+              return NewProduct(
+                product.id,
+                product.category,
+                price,
+                quantity,
+              );
             } else {
               return e;
             }
@@ -57,15 +71,26 @@ class AddProductsState extends ConsumerState<AddProducts> {
         });
       },
       data?.price.toString() ?? '',
+      data?.quantity.toString() ?? '',
     );
   }
 
-  showActionDialogBox(bool isNew, Function(int) onAdd, Function() onRemove,
-      Function(int) onUpdate, String price) {
+  showActionDialogBox(
+    bool isNew,
+    Function(int price, int quantity) onAdd,
+    Function() onRemove,
+    Function(int price, int quantity) onUpdate,
+    String price,
+    String quantity,
+  ) {
     final locale = AppLocalizations.of(context)!;
     TextEditingController amountController = TextEditingController(
       text: price.isNotEmpty ? formatPrice(int.parse(price)) : '',
     );
+    TextEditingController quantityController = TextEditingController(
+      text: quantity.isNotEmpty ? quantity : '',
+    );
+
     return showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -76,7 +101,7 @@ class AddProductsState extends ConsumerState<AddProducts> {
             style: const TextStyle(fontSize: 17.0),
           ),
           content: SizedBox(
-            height: 100,
+            height: 140,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,7 +117,17 @@ class AddProductsState extends ConsumerState<AddProducts> {
                     locale.enterPrice,
                     locale.price,
                   ),
-                )
+                ),
+                const SizedBox(height: 20.0),
+                TextField(
+                  keyboardType: TextInputType.number,
+                  controller: quantityController,
+                  cursorColor: kMainColor,
+                  decoration: inputDecorationWithLabel(
+                    "Enter quantity",
+                    "Quantity",
+                  ),
+                ),
               ],
             ),
           ),
@@ -101,19 +136,17 @@ class AddProductsState extends ConsumerState<AddProducts> {
               onPressed: () {
                 if (isNew) {
                   String amount = amountController.text.replaceAll(',', '');
-                  bool isValid = amount.isNotEmpty;
+                  String qty = quantityController.text;
+                  bool isValid = amount.isNotEmpty && qty.isNotEmpty;
                   if (isValid) {
-                    onAdd(int.parse(amount));
-                  } else {
-                    return;
+                    onAdd(int.parse(amount), int.parse(qty));
                   }
                 } else {
                   String amount = amountController.text.replaceAll(',', '');
-                  bool isValid = amount.isNotEmpty;
+                  String qty = quantityController.text;
+                  bool isValid = amount.isNotEmpty && qty.isNotEmpty;
                   if (isValid) {
-                    onUpdate(int.parse(amount));
-                  } else {
-                    return;
+                    onUpdate(int.parse(amount), int.parse(qty));
                   }
                 }
                 Navigator.pop(context);
@@ -154,9 +187,10 @@ class AddProductsState extends ConsumerState<AddProducts> {
     for (var product in selectedProducts) {
       final data = {
         'product': product.product,
-        'categories': product.categories,
-        'vendor': vendor.id,
+        'category': product.category,
+        'store': vendor.id,
         'price': product.price,
+        'quantity': product.quantity,
         'stock': 0,
         'createdOn': Timestamp.now(),
       };
@@ -173,58 +207,47 @@ class AddProductsState extends ConsumerState<AddProducts> {
     final locale = AppLocalizations.of(context)!;
     final productsStream = ref.watch(ProductServices.productsStream);
     final vendor = ref.watch(vendorProvider)!;
-    final region = ref.watch(regionProvider);
-    final country = getCountry(region.code);
+    final categoryStream = ref.watch(CategoryServices.categoriesStream);
+    final categoryValue = categoryStream.value ?? [];
 
     final storeProductsStream = ref.watch(
       ProductServices.storeProductsStream(vendor.id),
     );
-    final products = (productsStream.value ?? []).where((p) {
-      final searched = p.name.toLowerCase().contains(query.toLowerCase());
-      final notAdded = storeProductsStream.value?.firstWhereOrNull((e) {
-            return e.product == p.id;
-          }) ==
+
+    final productss = productsStream.value ?? [];
+
+    final categoryIds = productss
+        .map((e) {
+          return e.category;
+        })
+        .toSet()
+        .toList();
+
+    final tabCategories = categoryStream.isLoading
+        ? <Category>[]
+        : categoryIds.map((e) {
+            return categoryValue.firstWhere((c) => c.id == e);
+          }).toList();
+
+    final filteredProducts = productss.where((p) {
+      final searched = p.productName[locale.localeName].toLowerCase().contains(query.toLowerCase());
+      final notAdded = storeProductsStream.value
+              ?.firstWhereOrNull((e) => e.product == p.id) ==
           null;
-      final isDrink = p.productClass == 'Drink';
-      return searched && notAdded && p.isActive && isDrink;
+      final isInCategory = p.category == tabCategories[activeTab].id;
+      return searched && notAdded && p.isActive ;
     }).toList();
 
-    final foods = (productsStream.value ?? []).where((p) {
-      final searched = p.name.toLowerCase().contains(query.toLowerCase());
-      final notAdded = storeProductsStream.value?.firstWhereOrNull((e) {
-            return e.product == p.id;
-          }) ==
-          null;
-      final isFood = p.productClass == 'Food';
-      return searched && notAdded && p.isActive && isFood;
-    }).toList();
 
-    List<Tab> tabs = [
-      const Tab(text: 'Drinks'),
-      const Tab(text: 'Foods'),
-    ];
-
-    products.sort((a, b) {
-      if (country != null) {
-        final r = country.name;
-        if (a.origin == r && b.origin != r) {
-          return -1;
-        } else if (a.origin != r && b.origin == r) {
-          return 1;
-        }
-      }
-      return a.origin.compareTo(b.origin);
-    });
-    List<Widget> productBuilders = [products, foods].map((elements) {
-      return ListView.separated(
-        itemCount: elements.length,
+    List<Widget> productBuilders = [
+      ListView.separated(
+        itemCount: filteredProducts.length,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         shrinkWrap: true,
         itemBuilder: (BuildContext context, int index) {
-          final product = elements[index];
-          final newProduct = selectedProducts.firstWhereOrNull((p) {
-            return product.id == p.product;
-          });
+          final product = filteredProducts[index];
+          final newProduct =
+              selectedProducts.firstWhereOrNull((p) => product.id == p.product);
           final isSelected = newProduct != null;
           return FadedSlideAnimation(
             beginOffset: const Offset(0, 0.3),
@@ -240,13 +263,10 @@ class AddProductsState extends ConsumerState<AddProducts> {
             ),
           );
         },
-        separatorBuilder: (context, index) {
-          return const SizedBox(
-            height: 10,
-          );
-        },
-      );
-    }).toList();
+        separatorBuilder: (context, index) => const SizedBox(height: 10),
+      ),
+    ];
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -254,35 +274,55 @@ class AddProductsState extends ConsumerState<AddProducts> {
       child: ModalProgressHUD(
         inAsyncCall: isLoading,
         child: DefaultTabController(
-          length: tabs.length,
+          length: tabCategories.length,
           child: Scaffold(
             appBar: PreferredSize(
               preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
-                leading: InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: const Icon(Icons.arrow_back),
-                ),
+                centerTitle: true,
                 title: Text(
-                  locale.add,
+                  locale.product,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
-                titleSpacing: 0.0,
                 bottom: PreferredSize(
                   preferredSize: const Size.fromHeight(0.0),
-                  child: TabBar(
-                    onTap: (v) {
-                      setState(() {
-                        activeTab = v;
-                      });
-                    },
-                    tabs: tabs,
-                    isScrollable: false,
-                    labelColor: kMainColor,
-                    unselectedLabelColor: kLightTextColor,
-                    indicatorColor: kMainColor,
+                  child: Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          color: unselectedLabelColor,
+                          width: 0.3,
+                        ),
+                      ),
+                    ),
+                    child: TabBar(
+                       indicator: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      onTap: (index) {
+                        setState(() {
+                          activeTab = index;
+                        });
+                      },
+                      isScrollable: true,
+                      indicatorColor: kMainColor,
+                      labelColor: kMainColor,
+                      labelStyle: const TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w600
+                      ),
+                      tabAlignment:TabAlignment.start ,
+                       unselectedLabelColor: Colors.black,
+                      tabs: tabCategories.map((category) {
+                        return Tab(
+                          text: category.name[locale.localeName] ?? "Category",
+                        );
+                      }).toList(),
+                    ),
                   ),
                 ),
               ),
@@ -387,7 +427,12 @@ class AddProductsState extends ConsumerState<AddProducts> {
                       ),
                       Expanded(
                         child: TabBarView(
-                          children: productBuilders,
+                          children: productBuilders.isNotEmpty
+                              ? productBuilders
+                              : List.generate(
+                                  tabCategories.length,
+                                  (index) => Center(child: Text("No Products")),
+                                ),
                         ),
                       ),
                     ],

@@ -5,9 +5,9 @@ class Collections {
   final String application = 'application';
   final String categories = 'categories';
   final String offers = 'offers';
-  final String vendors = 'vendors';
+  final String vendors = 'stores';
   final String products = 'products';
-  final String vendorProducts = 'vendorProducts';
+  final String vendorProducts = 'storeProducts';
   final String carts = 'carts';
   final String favorites = 'favorites';
   final String orders = 'orders';

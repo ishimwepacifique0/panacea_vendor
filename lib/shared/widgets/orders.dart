@@ -27,6 +27,7 @@ class Orders extends ConsumerWidget {
 
     final users = usersStream.value ?? [];
     final products = productsStream.value ?? [];
+  
 
     final isLoading = productsStream.isLoading || usersStream.isLoading;
 
@@ -48,10 +49,8 @@ class Orders extends ConsumerWidget {
                     return e.id == order.user;
                   });
                   final names = user?.fullName ?? user?.phoneNumber ?? '';
-                  String formattedDateTime =
-                      formatDateTime(context, order.date);
-                  String status =
-                      order.paid ? locale.beingPrepared : locale.pending;
+                  String formattedDateTime = formatDateTime(context, order.date);
+                  String status = order.paid ? locale.beingPrepared : locale.pending;
                   if (order.served) {
                     status = locale.served;
                   }
@@ -179,17 +178,6 @@ class Orders extends ConsumerWidget {
                                               fontWeight: FontWeight.w500,
                                             ),
                                       ),
-                                      Text(
-                                        '${locale.tableNO}: ${order.table} ',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .titleLarge!
-                                            .copyWith(
-                                              fontSize: 11.7,
-                                              letterSpacing: 0.06,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
                                     ],
                                   ),
                                 ],
@@ -233,7 +221,7 @@ class Orders extends ConsumerWidget {
                                 child: Row(
                                   children: [
                                     Text(
-                                      '${product?.name} x '
+                                      '${product?.productName[locale.localeName]} x '
                                       '${item['quantity']}',
                                       textAlign: TextAlign.start,
                                       style: Theme.of(context)

@@ -34,7 +34,7 @@ class ProductServices {
     (ref, id) {
       return fireStore
           .collection(vCollection)
-          .where('vendor', isEqualTo: id)
+          .where('store', isEqualTo: id)
           .snapshots()
           .map((event) {
         return event.docs.map((e) {
