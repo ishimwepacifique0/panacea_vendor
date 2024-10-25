@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "49459051581",
-    "project_id": "icupa-396da",
-    "storage_bucket": "icupa-396da.appspot.com"
+    "project_number": "498351091702",
+    "project_id": "madein-a5f78",
+    "storage_bucket": "madein-a5f78.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:49459051581:android:f4d9d75597b02bf2107e54",
+        "mobilesdk_app_id": "1:498351091702:android:3f005c4641b5883467e1d7",
         "android_client_info": {
-          "package_name": "com.emateli.app"
+          "package_name": "com.madein.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCkHmmH1WT55qp9NPN08B5skG8ET8OxWEQ"
+          "current_key": "AIzaSyCAw3Uapngc4IuswkLAhcFgtDlLjpqJVY8"
         }
       ],
       "services": {
@@ -26,53 +26,15 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:49459051581:android:516910885314a049107e54",
+        "mobilesdk_app_id": "1:498351091702:android:a006743cd2a9c88f67e1d7",
         "android_client_info": {
-          "package_name": "com.emateli.vendor"
+          "package_name": "com.madein.vendor"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCkHmmH1WT55qp9NPN08B5skG8ET8OxWEQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:49459051581:android:a8d46e05fc09af9a107e54",
-        "android_client_info": {
-          "package_name": "com.icupa.app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCkHmmH1WT55qp9NPN08B5skG8ET8OxWEQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:49459051581:android:1798414b657d5489107e54",
-        "android_client_info": {
-          "package_name": "com.icupa.vendor"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCkHmmH1WT55qp9NPN08B5skG8ET8OxWEQ"
+          "current_key": "AIzaSyCAw3Uapngc4IuswkLAhcFgtDlLjpqJVY8"
         }
       ],
       "services": {

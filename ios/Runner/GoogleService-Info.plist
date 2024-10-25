@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyAqa8ql4jBq5zj8VxW8l84nvZ_Ak_1ccew</string>
+	<string>AIzaSyBX-OsDNv0-JUsZnNtLua3Mf6ubwXMOBHY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>49459051581</string>
+	<string>498351091702</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.emateli.vendor</string>
+	<string>com.madein.vendor</string>
 	<key>PROJECT_ID</key>
-	<string>icupa-396da</string>
+	<string>madein-a5f78</string>
 	<key>STORAGE_BUCKET</key>
-	<string>icupa-396da.appspot.com</string>
+	<string>madein-a5f78.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:49459051581:ios:53ae7e3d00afb419107e54</string>
+	<string>1:498351091702:ios:5f6c5084cb3e58a767e1d7</string>
 </dict>
 </plist>

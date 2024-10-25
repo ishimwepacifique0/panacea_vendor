@@ -1,4 +1,4 @@
-package com.emateli.vendor
+package com.madein.vendor
 
 import io.flutter.embedding.android.FlutterActivity
 
