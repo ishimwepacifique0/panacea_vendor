@@ -409,8 +409,8 @@ class Products extends ConsumerWidget {
                     FilteringTextInputFormatter.digitsOnly,
                   ],
                   decoration: inputDecorationWithLabel(
-                    "Enter quantity",
-                    "Quantity",
+                    'Enter quantity',
+                    'Quantity',
                   ),
                 )
               ],

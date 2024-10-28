@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Icupa Bar</string>
+	<string>MadeIn Vendor</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>icupa_vendor</string>
+	<string>madein_vendor</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -52,11 +52,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>Icupa Vendor uses camera access for personalizing profiles and for efficient claims reporting process, updating images, and for KYC verification, ensuring enhanced user experience and regulatory compliance</string>
+	<string>Madein Vendor uses camera access for personalizing profiles and for efficient claims reporting process, updating images, and for KYC verification, ensuring enhanced user experience and regulatory compliance</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Icupa Vendor requires photo access for customizing profiles, efficient claims reporting process, and for essential KYC verifications, ensuring a personalized, secure experience and regulatory compliance.</string>
+	<string>Madein Vendor requires photo access for customizing profiles, efficient claims reporting process, and for essential KYC verifications, ensuring a personalized, secure experience and regulatory compliance.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Icupa Vendor requires your location to display nearby bars and restaurants, enhancing your experience with accurate recommendations and relevant information.</string>
+	<string>Madein Vendor requires your location to display nearby bars and restaurants, enhancing your experience with accurate recommendations and relevant information.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

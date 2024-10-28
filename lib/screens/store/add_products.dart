@@ -124,8 +124,8 @@ class AddProductsState extends ConsumerState<AddProducts> {
                   controller: quantityController,
                   cursorColor: kMainColor,
                   decoration: inputDecorationWithLabel(
-                    "Enter quantity",
-                    "Quantity",
+                    'Enter quantity',
+                    'Quantity',
                   ),
                 ),
               ],
@@ -234,7 +234,7 @@ class AddProductsState extends ConsumerState<AddProducts> {
       final notAdded = storeProductsStream.value
               ?.firstWhereOrNull((e) => e.product == p.id) ==
           null;
-      final isInCategory = p.category == tabCategories[activeTab].id;
+      // final isInCategory = p.category == tabCategories[activeTab].id;
       return searched && notAdded && p.isActive ;
     }).toList();
 
@@ -319,7 +319,7 @@ class AddProductsState extends ConsumerState<AddProducts> {
                        unselectedLabelColor: Colors.black,
                       tabs: tabCategories.map((category) {
                         return Tab(
-                          text: category.name[locale.localeName] ?? "Category",
+                          text: category.name[locale.localeName] ?? 'Category',
                         );
                       }).toList(),
                     ),
@@ -431,7 +431,7 @@ class AddProductsState extends ConsumerState<AddProducts> {
                               ? productBuilders
                               : List.generate(
                                   tabCategories.length,
-                                  (index) => Center(child: Text("No Products")),
+                                  (index) => const Center(child: Text('No Products')),
                                 ),
                         ),
                       ),

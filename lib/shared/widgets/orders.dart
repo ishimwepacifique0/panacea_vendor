@@ -2,8 +2,8 @@ import 'package:animation_wrappers/animations/faded_slide_animation.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:icupa_vendor/models/order.dart';
-import 'package:icupa_vendor/screens/account/chat_page.dart';
 import 'package:icupa_vendor/services/messenger_service.dart';
 import 'package:icupa_vendor/services/order_services.dart';
 import 'package:icupa_vendor/services/product_services.dart';
@@ -13,6 +13,7 @@ import 'package:icupa_vendor/themes/colors.dart';
 import 'package:icupa_vendor/themes/style.dart';
 import 'package:icupa_vendor/utils.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Orders extends ConsumerWidget {
   final List<UserOrder> orders;
@@ -27,8 +28,6 @@ class Orders extends ConsumerWidget {
 
     final users = usersStream.value ?? [];
     final products = productsStream.value ?? [];
-  
-
     final isLoading = productsStream.isLoading || usersStream.isLoading;
 
     return Column(
@@ -49,8 +48,10 @@ class Orders extends ConsumerWidget {
                     return e.id == order.user;
                   });
                   final names = user?.fullName ?? user?.phoneNumber ?? '';
-                  String formattedDateTime = formatDateTime(context, order.date);
-                  String status = order.paid ? locale.beingPrepared : locale.pending;
+                  String formattedDateTime =
+                      formatDateTime(context, order.date);
+                  String status =
+                      order.paid ? locale.beingPrepared : locale.pending;
                   if (order.served) {
                     status = locale.served;
                   }
@@ -83,24 +84,21 @@ class Orders extends ConsumerWidget {
                                             fontSize: 13.3,
                                             letterSpacing: 0.07),
                                   ),
-                                  const SizedBox(width: 20.0),
+                                  const SizedBox(width: 10.0),
                                   InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) {
-                                            return ChatPage(
-                                              order: order,
-                                              user: user!,
-                                            );
-                                          },
-                                        ),
-                                      );
+                                    onTap: () async {
+                                      final phone = order.phone;
+                                      final String url = 'https://wa.me/$phone';
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      } else {
+                                        throw 'Could not launch $url';
+                                      }
                                     },
-                                    child: const Icon(
-                                      Icons.message,
-                                      size: 17,
+                                    child: const FaIcon(
+                                      FontAwesomeIcons.whatsapp,
+                                      color: Color(0xFF0ECB6F),
+                                      size: 20,
                                     ),
                                   ),
                                   const Spacer(),
