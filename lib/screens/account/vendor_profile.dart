@@ -275,7 +275,7 @@ class VendorProfileState extends ConsumerState<VendorProfile> {
                             decoration: BoxDecoration(
                               color: kWhiteColor,
                               shape: BoxShape.circle,
-                              border: Border.all(color: kMainColor, width: 2),
+                              border: Border.all(color: lavenderColor, width: 2),
                             ),
                             height: 125,
                             width: 125,
@@ -526,7 +526,7 @@ class VendorProfileState extends ConsumerState<VendorProfile> {
                                 focusColor: kOrange,
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: kMainColor,
+                                    color: lavenderColor,
                                   ),
                                   borderRadius: const BorderRadius.all(
                                     Radius.circular(24),
@@ -605,7 +605,7 @@ class VendorProfileState extends ConsumerState<VendorProfile> {
                           .copyWith(fontWeight: FontWeight.w500),
                       decoration: inputDecorationWithLabel(
                         locale.address,
-                        locale.barAddress,
+                        locale.pharmacyAddress,
                       ),
                       validator: (value) {
                         return null;
@@ -618,7 +618,7 @@ class VendorProfileState extends ConsumerState<VendorProfile> {
                       width: double.infinity,
                       padding: const EdgeInsets.only(left: 10),
                       child: Text(
-                        locale.barProfile,
+                        locale.pharmacyProfile,
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium!
@@ -660,7 +660,7 @@ class VendorProfileState extends ConsumerState<VendorProfile> {
                           ),
                           Switch(
                             activeColor: Colors.white,
-                            activeTrackColor: kMainColor,
+                            activeTrackColor: lavenderColor,
                             value: isActive && isValid(),
                             onChanged: (value) {
                               if (isValid()) {
@@ -681,6 +681,7 @@ class VendorProfileState extends ConsumerState<VendorProfile> {
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: BottomBar(
+                          color: lavenderColor,
                           text: locale.updateInfo,
                           isValid: isValid(),
                           onTap: () async {
@@ -744,8 +745,8 @@ class VendorProfileState extends ConsumerState<VendorProfile> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-          border: Border.all(color: kMainColor),
-          color: isSelected ? kMainColor : Colors.white,
+          border: Border.all(color: lavenderColor),
+          color: isSelected ? lavenderColor : Colors.white,
         ),
         padding: const EdgeInsets.symmetric(vertical: 3.0, horizontal: 10.0),
         child: Text(

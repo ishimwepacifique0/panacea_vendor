@@ -38,9 +38,9 @@ class WelcomeScreenState extends ConsumerState<WelcomeScreen> {
     final locale = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kMainColor,
-        systemOverlayStyle: SystemUiOverlayStyle(
-          systemNavigationBarColor: kMainColor,
+        backgroundColor: Colors.white,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          systemNavigationBarColor: Colors.white,
         ),
       ),
       body: FadedSlideAnimation(
@@ -48,7 +48,7 @@ class WelcomeScreenState extends ConsumerState<WelcomeScreen> {
         endOffset: const Offset(0, 0),
         slideCurve: Curves.linearToEaseOut,
         child: Container(
-          color: kMainColor,
+          color: Colors.white,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             mainAxisSize: MainAxisSize.max,
@@ -61,7 +61,7 @@ class WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                     constraints: const BoxConstraints(
                       maxWidth: 400,
                     ),
-                    child: Image.asset('assets/logo.png'),
+                    child: Image.asset('assets/5.png'),
                   ),
                 ),
               ),
@@ -73,8 +73,8 @@ class WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                     maxWidth: 600,
                   ),
                   child: BottomBar(
-                    color: kWhiteColor,
-                    textColor: kMainColor,
+                    color: lavenderColor,
+                    textColor: Colors.white,
                     onTap: () {
                       Navigator.push(
                         context,

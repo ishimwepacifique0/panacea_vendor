@@ -7,7 +7,7 @@ class Collections {
   final String offers = 'offers';
   final String vendors = 'stores';
   final String products = 'products';
-  final String vendorProducts = 'storeProducts';
+  final String pharmacyProducts = 'pharmacyproducts';
   final String carts = 'carts';
   final String favorites = 'favorites';
   final String orders = 'orders';

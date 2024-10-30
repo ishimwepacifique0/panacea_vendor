@@ -106,7 +106,7 @@ class VerifyScreenState extends ConsumerState<VerifyScreen> {
                             decoration: BoxDecoration(
                               color: Colors.white,
                               border: Border.all(
-                                color: hasError ? redColor : kMainColor,
+                                color: hasError ? redColor : lavenderColor,
                                 width: 1,
                               ),
                               borderRadius: BorderRadius.circular(5.0),

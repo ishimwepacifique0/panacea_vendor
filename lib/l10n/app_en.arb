@@ -55,7 +55,7 @@
     "invalidName": "Invalid Name",
     "invalidEmail": "Invalid Email",
     "invalidNameAndEmail": "Invalid Name and Email",
-    "fullName": "Name of Bar",
+    "fullName": "Name of Pharmacy",
     "emailAddress": "Email Address",
     "mobileNumber": "Mobile Number",
     "verificationText": "We'll send verification code on above given number.",
@@ -144,15 +144,15 @@
     "storeTimings": "Restaurant Timings",
     "openingTime": "Opening Time",
     "closingTime": "Closing Time",
-    "product": "Products",
-    "noProduct":"No products found",
+    "product": "Medics",
+    "noProduct":"No Medics found",
     "stock": "In Stock",
     "pending": "Pending",
     "item": "ITEM(S)",
     "sub": "Sub Total",
     "service": "Service Fee",
     "payment": "Payment Info",
-    "add": "Add Product",
+    "add": "Add Medics",
     "edit": "Edit",
     "info": "ITEM INFO",
     "title": "ITEM TITLE",
@@ -168,22 +168,22 @@
     "image": "Item Image",
     "cropImage": "Crop Image",
     "itemsFound": "Items Found",
-    "welcomeToICUPA": "Welcome to Icupa Vendor",
+    "welcomeToICUPA": "Welcome to Panacea Pharmacy",
     "whatsappSignUp": "Sign Up with WhatsApp",
     "whatsappNo": "WhatsApp Number",
     "completed": "Completed",
     "categoryText": "Category",
-    "addProduct": "Add Product",
+    "addProduct": "Add Medics",
     "preferredDrivers": "Preferred Drivers",
     "driverFound": "Drivers Found",
     "driversCanPreferred": "Drivers you can Preferred",
     "alreadyAddedDrivers": "No Drivers Available!",
     "editAndRemove": "Edit And Remove",
     "remove": "Remove",
-    "wantAddProduct": "Do you want to add this product",
+    "wantAddProduct": "Do you want to add this Medics",
     "editORDelete": "Edit or Delete this Item",
     "uploadImage": "Upload Image",
-    "uploadProduct": "Upload Product",
+    "uploadProduct": "Upload Medics",
     "allowLocation": "Allow Permission Location!",
     "pressContinue": "Press Here to Continue    >",
     "deliveryPartnerCustomer": "Customer Picked Order Itself",
@@ -232,12 +232,12 @@
             }
         }
     },
-    "barAddress": "Bar Address",
-    "barProfile": "Bar Profile",
-    "activateStore": "Activate store",
+    "pharmacyAddress": "Pharmacy Address",
+    "pharmacyProfile": "Pharmacy Profile",
+    "activateStore": "Activate pharmacy",
     "enterEmail": "Enter email address",
     "selectLanguage": "Select Language",
-    "privacy": "ICUPA’s Privacy Policy",
+    "privacy": "PANACEA’s Privacy Policy",
     "lastupdate": "Last Updated: 5th September 2023",
     "important": "Important",
     "sub_":
@@ -323,38 +323,38 @@
         "tandc": "Terms and Conditions",
     "tone": "1. Introduction",
     "toneone":
-        "1.1.   These Terms and Conditions govern the use of the ICUPA Mobile App (“App”), which offers digital financial intermediation services integrated with Ecobank. By accessing or using this App, you agree to abide by these Terms",
+        "1.1.   These Terms and Conditions govern the use of the PANACEA Mobile App (“App”), which offers digital financial intermediation services integrated with Ecobank. By accessing or using this App, you agree to abide by these Terms",
     "tonetwo":
         "1.2.   If you do not agree with any of these terms, you are prohibited from accessing or using this App.",
     "ttwo": "2. User Registration and Account Security",
     "ttwoone":
         "2.1. Users are required to register to access certain features of the App. This registration requires you to provide accurate, current, and complete information as per the provisions of the Togolese Consumer Protection Law.",
     "ttwotwo":
-        "2.2. It is essential for users to maintain the confidentiality of their account credentials. Any unauthorized access or breach should be reported to ICUPA immediately.",
+        "2.2. It is essential for users to maintain the confidentiality of their account credentials. Any unauthorized access or breach should be reported to PANACEA immediately.",
     "ttwo2":
-        "2.3. All ICUPA users must maintain an active account with Ecobank to access and utilize all services on ICUPA.",
+        "2.3. All PANACEA users must maintain an active account with Ecobank to access and utilize all services on PANACEA.",
     "tthree": "3. Integration with Ecobank",
     "tthree1":
-        "3.1. ICUPA has exclusively partnered with Ecobank as its sole payment provider.",
+        "3.1. PANACEA has exclusively partnered with Ecobank as its sole payment provider.",
     "tthree2":
         "3.2. Through the integration of Ecobank's open APIs, the App provides services such as internal bank-to-bank payments, Xpress account wallet services, and more.",
     "tthree3":
-        "3.3. Digital services provided by ICUPA include but are not limited to: digital church offerings, community-based group savings, CSR and other social cause contributions.",
+        "3.3. Digital services provided by PANACEA include but are not limited to: digital church offerings, community-based group savings, CSR and other social cause contributions.",
     "tfour": "4. Compliance with Financial Regulations",
     "tfour1":
-        "4.1. ICUPA ensures that all its financial transactions comply with the WAEMU Banking Laws, Togo’s National Financial Regulations, and the Microfinance Institutions Regulations of Togo.",
+        "4.1. PANACEA ensures that all its financial transactions comply with the WAEMU Banking Laws, Togo’s National Financial Regulations, and the Microfinance Institutions Regulations of Togo.",
     "tfour2":
-        "4.2. Committed to the fight against financial crimes, ICUPA strictly adheres to the Anti-Money Laundering and Countering Financing of Terrorism (AML/CFT) regulations of Togo.",
+        "4.2. Committed to the fight against financial crimes, PANACEA strictly adheres to the Anti-Money Laundering and Countering Financing of Terrorism (AML/CFT) regulations of Togo.",
     "tfive": "5. Data Protection and Privacy",
     "tfive1":
         "5.1. We are committed to ensuring the protection of our users' data. All user data is processed with the utmost security, and in alignment with Togo’s Data Protection regulations.",
     "tfive2":
         "5.2. Data sharing with Ecobank is essential for service provision, but this is done under strict data-sharing agreements which prioritize user interests.",
     "tfive3":
-        "5.3. ICUPA utilizes top-tier encryption and security protocols to safeguard user information.",
+        "5.3. PANACEA utilizes top-tier encryption and security protocols to safeguard user information.",
     "tsix": "6. Intellectual Property",
     "tsix1":
-        "6.1. The App's content, including its design, graphics, and textual content, are the intellectual property of ICUPA or its licensors. Unauthorized use, reproduction, or distribution of this content is strictly prohibited.",
+        "6.1. The App's content, including its design, graphics, and textual content, are the intellectual property of PANACEA or its licensors. Unauthorized use, reproduction, or distribution of this content is strictly prohibited.",
     "tseven": "7. User Responsibilities and Conduct",
     "tseven1":
         "7.1. Users must ensure the accuracy of transaction details they input, including details of the recipient, amount, and purpose.",
@@ -364,18 +364,18 @@
         "7.3. Users must refrain from any malicious activity that could harm the App\"s operations or other users.",
     "teight": "8. Limitation of Liability",
     "teight1":
-        "8.1. While ICUPA ensures the precision of its services, it will not be held responsible for transaction errors resulting from user mistakes.",
+        "8.1. While PANACEA ensures the precision of its services, it will not be held responsible for transaction errors resulting from user mistakes.",
     "teight2":
-        "8.2. ICUPA\"s operation relies on third-party services, such as Ecobank\"s API. Therefore, ICUPA cannot guarantee uninterrupted service and is not responsible for any disruptions due to third-party downtimes.",
+        "8.2. PANACEA\"s operation relies on third-party services, such as Ecobank\"s API. Therefore, PANACEA cannot guarantee uninterrupted service and is not responsible for any disruptions due to third-party downtimes.",
     "tnine": "9. Consumer Protection",
     "tnine1":
-        "9.1. ICUPA fully complies with the Togolese Consumer Protection Law. Any disparities between services promised and those delivered can be legally addressed.",
+        "9.1. PANACEA fully complies with the Togolese Consumer Protection Law. Any disparities between services promised and those delivered can be legally addressed.",
     "tten": "10. Modifications to the Terms",
     "tten1":
-        "10.1. ICUPA retains the right to update or change these Terms periodically. Users will be intimated of any such changes, and their continued use of the App post-notification will be deemed as acceptance of the revised Terms.",
+        "10.1. PANACEA retains the right to update or change these Terms periodically. Users will be intimated of any such changes, and their continued use of the App post-notification will be deemed as acceptance of the revised Terms.",
     "televen": "11. Governing Law and Jurisdiction",
     "televen1":
-        "11.1. These Terms are governed by and interpreted in accordance with Togolese laws. Any disputes arising out of or in connection with ICUPA’s services will be subject to the jurisdiction of Togo’s courts.",
+        "11.1. These Terms are governed by and interpreted in accordance with Togolese laws. Any disputes arising out of or in connection with PANACEA’s services will be subject to the jurisdiction of Togo’s courts.",
     "ttwelve": "12. Contact Information",
     "tqueries":
         "For any queries, complaints, or feedback, users can contact: info@ikanisa.com",
@@ -383,9 +383,9 @@
     "networkIssue": "Connection issue! \nTry again.",
     "closeA": "Close Account",
     "closeQ": "Are you sure you want to delete your account?",
-    "closeP": "Once you delete your account, all your data will be permanently deleted, and you will no longer be able to access your information on ICUPA.",
+    "closeP": "Once you delete your account, all your data will be permanently deleted, and you will no longer be able to access your information on PANACEA.",
     "enableLocation": "🔔 Enable Location Sharing",
-    "enableLocationMessage": "For the best experience with ICUPA, please enable location sharing in your app settings. This allows us to show you nearby bars and restaurants and offer the best recommendations.",
+    "enableLocationMessage": "For the best experience with PANACEA, please enable location sharing in your app settings. This allows us to show you nearby Pharmacys and restaurants and offer the best recommendations.",
     "openSettings": "Open Settings",
     "goToLocation": "Go to Location",
     "turnOnLocation": "Turn on Location Services",

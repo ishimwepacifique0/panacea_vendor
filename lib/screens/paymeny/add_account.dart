@@ -232,9 +232,9 @@ class AddAccountState extends ConsumerState<AddAccount> {
                           ),
                         ),
                         focusColor: kOrange,
-                        focusedBorder: OutlineInputBorder(
+                        focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: kMainColor,
+                            color: lavenderColor,
                           ),
                           borderRadius: const BorderRadius.all(
                             Radius.circular(24),
@@ -280,7 +280,7 @@ class AddAccountState extends ConsumerState<AddAccount> {
                             Radio(
                               value: g.value,
                               groupValue: gender,
-                              activeColor: kMainColor,
+                              activeColor: lavenderColor,
                               toggleable: isLoading,
                               onChanged: (v) {
                                 if (isLoading) return;

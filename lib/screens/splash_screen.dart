@@ -8,7 +8,6 @@ import 'package:icupa_vendor/services/local_storage.dart';
 import 'package:icupa_vendor/services/notification_service.dart';
 import 'package:icupa_vendor/shared/shared_states.dart';
 import 'package:icupa_vendor/shared/widgets/app_screen.dart';
-import 'package:icupa_vendor/themes/colors.dart';
 import 'package:icupa_vendor/utils.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -93,7 +92,7 @@ class SplashScreenState extends ConsumerState<SplashScreen> {
         await initApp();
       },
       child: Scaffold(
-        backgroundColor: kMainColor,
+        backgroundColor: Colors.white,
         body: Stack(
           children: [
             Positioned.fill(
@@ -103,7 +102,7 @@ class SplashScreenState extends ConsumerState<SplashScreen> {
                     maxWidth: 400,
                   ),
                   child: Image.asset(
-                    'assets/splash.png',
+                    'assets/5.png',
                     fit: BoxFit.cover,
                   ),
                 ),

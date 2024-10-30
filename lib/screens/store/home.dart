@@ -43,7 +43,8 @@ class Home extends ConsumerWidget {
             centerTitle: true,
             title: Text(
               locale.orderText,
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+              ),
             ),
             actions: [
               Padding(
@@ -81,9 +82,9 @@ class Home extends ConsumerWidget {
               child: TabBar(
                 tabs: tabs,
                 isScrollable: false,
-                labelColor: kMainColor,
+                labelColor: lavenderColor,
                 unselectedLabelColor: kLightTextColor,
-                indicatorColor: kMainColor,
+                indicatorColor: lavenderColor,
               ),
             ),
           ),

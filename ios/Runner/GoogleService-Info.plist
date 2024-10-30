@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBX-OsDNv0-JUsZnNtLua3Mf6ubwXMOBHY</string>
+	<string>AIzaSyDiol2KOzgL79Lcly1VAuwhh0garys1sBc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>498351091702</string>
+	<string>711859015599</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.madein.vendor</string>
+	<string>com.panacea.pharmacy</string>
 	<key>PROJECT_ID</key>
-	<string>madein-a5f78</string>
+	<string>panacea-b4045</string>
 	<key>STORAGE_BUCKET</key>
-	<string>madein-a5f78.appspot.com</string>
+	<string>panacea-b4045.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:498351091702:ios:5f6c5084cb3e58a767e1d7</string>
+	<string>1:711859015599:ios:d15cde43db8538870fa95a</string>
 </dict>
 </plist>

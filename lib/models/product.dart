@@ -1,69 +1,57 @@
 class Product {
-  String id;
-  Map<String, dynamic> productName;
-  Map<String, dynamic> country;
-  String category;
-  List<dynamic> tags;
-  String image;
-  bool isActive;
+  final String id, productName,genericName, dosageStrength,dosageForm, packSize,packagingType, shelfLife, manufacturerName, manufacturerCountry;
+  final String? image;
 
   Product({
     required this.id,
     required this.productName,
-    required this.category,
-    required this.image,
-    required this.tags,
-    required this.country,
-    required this.isActive,
+    required this.genericName,
+    required this.dosageStrength,
+    required this.dosageForm,
+    required this.packSize,
+    required this.packagingType,
+    required this.shelfLife,
+    required this.manufacturerName,
+    required this.manufacturerCountry,
+    this.image,
   });
-
-  static Map<String, dynamic> castToMap(dynamic value) {
-    if (value is String) {
-      return {}; 
-    } else if (value is Map<String, dynamic>) {
-      return value;
-    } else {
-      return {};
-    }
-  }
 
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
-      id: json['id'],
-      productName: castToMap(json['productName']),  
-      country: castToMap(json['country']),
-      category: json['category'] ?? '',                      
-      image: json['image'] ?? '', 
-      tags: json['tags'] ?? [],  
-      isActive: json['isActive'] ?? false,               
+      id:json['id'],
+      productName: json['productName'],
+      genericName: json['genericName'],
+      dosageStrength: json['dosageStrength'],
+      dosageForm: json['dosageForm'],
+      packSize: json['packSize'],
+      packagingType: json['packagingType'],
+      shelfLife: json['shelfLife'],
+      manufacturerName: json['manufacturerName'],
+      manufacturerCountry: json['manufacturerCountry'],
+      image: json['image'] ?? '',
     );
   }
 }
 
 
-class VendorProduct {
-  String id, product, store ,category;
+class PharmacyProduct {
+  String id, product, pharmacy ;
   int price;
   DateTime createdOn;
-  int? quantity;
-  VendorProduct({
+  PharmacyProduct({
     required this.id,
     required this.product,
-    required this.store,
-    required this.category, 
+    required this.pharmacy,
     required this.price,
-    this.quantity,
     required this.createdOn,
   });
 
-  factory VendorProduct.fromJson(Map<String, dynamic> json) {
-    return VendorProduct(
+  factory PharmacyProduct.fromJson(Map<String, dynamic> json) {
+    return PharmacyProduct(
       id: json['id'],
       product: json['product'],
-      store: json['store'],
-      category: json['category'], 
+      pharmacy: json['pharmacy'],
       price: json['price'],
-      quantity: json['quantity'] ?? 0,
       createdOn: json['createdOn'].toDate(),
     );
   }
@@ -71,19 +59,27 @@ class VendorProduct {
 
 class StoreProduct {
   final Product product;
-  final VendorProduct vendorProduct;
+  final PharmacyProduct vendorProduct;
 
-  StoreProduct({
-    required this.product,
-    required this.vendorProduct,
-  });
+  StoreProduct({required this.product, required this.vendorProduct});
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StoreProduct &&
+          runtimeType == other.runtimeType &&
+          product.id == other.product.id && 
+          vendorProduct.id == other.vendorProduct.id; 
+
+  @override
+  int get hashCode => product.id.hashCode ^ vendorProduct.id.hashCode;
 }
+
 
 class NewProduct {
   String product;
-  String category;
-  int price, quantity;
-  NewProduct(this.product, this.category,this.price, this.quantity);
+  int price;
+  NewProduct(this.product,this.price);
 }
 
 class ProductClass {

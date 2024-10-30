@@ -262,11 +262,11 @@ class LoginState extends ConsumerState<Login> {
                             ),
                           ),
                           focusColor: kOrange,
-                          focusedBorder: OutlineInputBorder(
+                          focusedBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: kMainColor,
+                              color: pinkColor,
                             ),
-                            borderRadius: const BorderRadius.all(
+                            borderRadius: BorderRadius.all(
                               Radius.circular(24),
                             ),
                           ),

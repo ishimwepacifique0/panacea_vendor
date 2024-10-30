@@ -54,7 +54,7 @@ class AnimatedBottomBarState extends State<AnimatedBottomBar>
           duration: duration,
           decoration: BoxDecoration(
             color:
-                isSelected ? kMainColor.withOpacity(0.075) : Colors.transparent,
+                isSelected ? lavenderColor.withOpacity(0.15) : Colors.transparent,
             borderRadius: const BorderRadius.all(
               Radius.circular(30),
             ),
@@ -64,7 +64,7 @@ class AnimatedBottomBarState extends State<AnimatedBottomBar>
               ImageIcon(
                 AssetImage(item.image),
                 color: isSelected
-                    ? kMainColor
+                    ? lavenderColor
                     : Theme.of(context).secondaryHeaderColor,
               ),
               const SizedBox(

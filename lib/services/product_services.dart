@@ -5,7 +5,7 @@ import 'package:icupa_vendor/models/product.dart';
 
 class ProductServices {
   static final collection = collections.products;
-  static final vCollection = collections.vendorProducts;
+  static final vCollection = collections.pharmacyProducts;
   static final fireStore = FirebaseFirestore.instance;
 
   static final productsStream = StreamProvider<List<Product>>((ref) {
@@ -19,28 +19,28 @@ class ProductServices {
   });
 
   static final vendorsProductsStream =
-      StreamProvider<List<VendorProduct>>((ref) {
+      StreamProvider<List<PharmacyProduct>>((ref) {
     return fireStore.collection(vCollection).snapshots().map(
           (event) => event.docs.map((e) {
             var data = e.data();
             data['id'] = e.id;
-            return VendorProduct.fromJson(data);
+            return PharmacyProduct.fromJson(data);
           }).toList(),
         );
   });
 
   static final storeProductsStream =
-      StreamProvider.family<List<VendorProduct>, String>(
+      StreamProvider.family<List<PharmacyProduct>, String>(
     (ref, id) {
       return fireStore
           .collection(vCollection)
-          .where('store', isEqualTo: id)
+          .where('pharmacy', isEqualTo: id)
           .snapshots()
           .map((event) {
         return event.docs.map((e) {
           var data = e.data();
           data['id'] = e.id;
-          return VendorProduct.fromJson(data);
+          return PharmacyProduct.fromJson(data);
         }).toList();
       });
     },

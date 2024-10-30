@@ -25,7 +25,7 @@ class BottomBar extends StatelessWidget {
       onTap: onTap as void Function()?,
       child: Container(
         decoration: BoxDecoration(
-          color: color ?? kMainColor.withOpacity(isValid ? 1.0 : 0.5),
+          color: color ?? lavenderColor.withOpacity(isValid ? 1.0 : 0.5),
           borderRadius: const BorderRadius.all(
             Radius.circular(30.0),
           ),

@@ -121,8 +121,8 @@ class Account extends ConsumerWidget {
                       ),
                       Text(
                         locale.storeProfile,
-                        style: TextStyle(
-                          color: kMainColor,
+                        style: const TextStyle(
+                          color: lavenderColor,
                           fontSize: 13.3,
                           fontWeight: FontWeight.w500,
                         ),

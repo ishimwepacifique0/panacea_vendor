@@ -7,7 +7,7 @@ import 'package:icupa_vendor/firebase_options.dart';
 import 'package:icupa_vendor/screens/splash_screen.dart';
 import 'package:icupa_vendor/shared/shared_states.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:icupa_vendor/themes/colors.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,11 +15,12 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
+    const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
-      systemNavigationBarColor: kMainColor,
+      systemNavigationBarColor: Colors.white,
     ),
   );
+
   runApp(
     const ProviderScope(
       child: MyApp(),
@@ -35,7 +36,7 @@ class MyApp extends ConsumerWidget {
     final locale = ref.watch(localeProvider);
     final theme = ref.watch(themeProvider);
     return MaterialApp(
-      title: 'Icupa Vendor',
+      title: 'PANACEA PHARMACY',
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

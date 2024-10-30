@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:icupa_vendor/constants.dart';
-import 'package:icupa_vendor/models/category.dart';
 import 'package:icupa_vendor/models/order.dart';
 import 'package:icupa_vendor/models/product.dart';
 import 'package:icupa_vendor/models/region.dart';
@@ -15,7 +13,6 @@ import 'package:icupa_vendor/services/category_service.dart';
 import 'package:icupa_vendor/services/order_services.dart';
 import 'package:icupa_vendor/services/product_services.dart';
 import 'package:icupa_vendor/shared/shared_states.dart';
-import 'package:icupa_vendor/shared/widgets/phone_inputs.dart';
 import 'package:icupa_vendor/themes/colors.dart';
 import 'package:icupa_vendor/utils.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -38,113 +35,32 @@ class Products extends ConsumerWidget {
     final ordersStream = ref.watch(OrderServices.ordersStream(vendor.id));
 
     final orders = ordersStream.value ?? [];
-    final categories = (categoryStream.value ?? []);
     final products = productsStream.value ?? [];
     final storeProducts = productsStream.isLoading
         ? <StoreProduct>[]
-        : (storeProductsStream.value ?? []).map((e) {
-            final product =
-                products.firstWhere((product) => product.id == e.product);
-            return StoreProduct(product: product, vendorProduct: e);
-          }).toList();
-
-    final categoryIds = storeProducts
-        .map((e) {
-          return e.product.category;
-        })
-        .toSet()
-        .toList();
-    final tabCategories = categoryStream.isLoading
-        ? <Category>[]
-        : categoryIds.map((e) {
-            return categories.firstWhere((c) => c.id == e);
-          }).toList();
-          
-    final categoryKeys = tabCategories.map((e) {
-      return GlobalKey();
-    }).toList();
+        : (storeProductsStream.value ?? [])
+            .map((e) {
+              final product =
+                  products.firstWhere((product) => product.id == e.product);
+              return StoreProduct(product: product, vendorProduct: e);
+            })
+            .toSet()
+            .toList();
 
     final isLoading = productsStream.isLoading ||
         categoryStream.isLoading ||
         storeProductsStream.isLoading;
 
-    int activeIndex = 0;
-
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(60.0),
           child: AppBar(
             centerTitle: true,
             title: Text(
               locale.product,
               style: Theme.of(context).textTheme.bodyLarge,
-            ),
-            bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(0.0),
-              child: Container(
-                width: double.infinity,
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: unselectedLabelColor,
-                      width: 0.3,
-                    ),
-                  ),
-                ),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: StatefulBuilder(builder: (context, setState) {
-                    return Row(
-                      children: List.generate(tabCategories.length, (index) {
-                        final category = tabCategories[index];
-                        final key = categoryKeys[index];
-                        bool isSelected = activeIndex == index;
-                        return InkWell(
-                          onTap: () {
-                            setState(() {
-                              activeIndex = index;
-                            });
-                            Scrollable.ensureVisible(
-                              key.currentContext!,
-                            );
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 10,
-                              horizontal: 20,
-                            ),
-                            decoration: isSelected
-                                ? BoxDecoration(
-                                    border: Border(
-                                      bottom: BorderSide(
-                                        color: kMainColor,
-                                        width: 2,
-                                      ),
-                                    ),
-                                  )
-                                : null,
-                            child: Text(
-                              category.name[locale.localeName],
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineMedium!
-                                  .copyWith(
-                                    color:
-                                        isSelected ? kMainColor : kSimpleText,
-                                  ),
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                    );
-                  }),
-                ),
-              ),
             ),
           ),
         ),
@@ -160,7 +76,7 @@ class Products extends ConsumerWidget {
                       child: Text(
                         '${locale.no} ${locale.itemsFound}',
                         style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: kMainColor,
+                              color: lavenderColor,
                               fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -172,64 +88,33 @@ class Products extends ConsumerWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 58.0),
                   child: Column(
-                    children: List.generate(tabCategories.length, (index) {
-                      final category = tabCategories[index];
-                      final key = categoryKeys[index];
-                      final products = storeProducts.where(((sp) {
-                        return sp.product.category.contains(category.id);
-                      })).toList();
-                      return Column(
-                        key: key,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 16,
-                              horizontal: 20,
-                            ),
-                            child: Text(
-                              category.name[locale.localeName],
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleLarge!
-                                  .copyWith(
-                                    color: kBlack,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 0.67,
-                                    fontSize: 17,
-                                  ),
-                            ),
-                          ),
-                          FadedSlideAnimation(
+                    children: [
+                      if (storeProducts.isNotEmpty)
+                        ...storeProducts.map((product) {
+                          return FadedSlideAnimation(
                             beginOffset: const Offset(0, 0.3),
                             endOffset: const Offset(0, 0),
                             slideCurve: Curves.linearToEaseOut,
                             child: Column(
-                              children: <Widget>[
-                                ...productList(
-                                  context,
-                                  products,
-                                  orders,
-                                  region,
-                                  locale.localeName
-                                ),
-                                Divider(
-                                  color: Theme.of(context).cardColor,
-                                  thickness: 6.3,
-                                ),
-                              ],
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: productList(
+                                context,
+                                [product],
+                                orders,
+                                region,
+                                locale.localeName,
+                              ),
                             ),
-                          ),
-                        ],
-                      );
-                    }).toList(),
+                          );
+                        }).toList(),
+                    ],
                   ),
                 ),
             ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: kMainColor,
+          backgroundColor: lavenderColor,
           onPressed: () {
             Navigator.push(
               context,
@@ -253,14 +138,8 @@ class Products extends ConsumerWidget {
     );
   }
 
-  List<Widget> productList(
-    BuildContext context,
-    List<StoreProduct> products,
-    List<UserOrder> orders,
-    Region region,
-    String locale
-    
-  ) {
+  List<Widget> productList(BuildContext context, List<StoreProduct> products,
+      List<UserOrder> orders, Region region, String locale) {
     return products.map((product) {
       final productOrders = orders.where((e) {
         return e.products.where((p) {
@@ -280,12 +159,11 @@ class Products extends ConsumerWidget {
               height: 70,
               width: 70,
               child: CachedNetworkImage(
-                imageUrl: product.product.image.isNotEmpty
-                    ? product.product.image
-                    : defaultVendorImg,
+                imageUrl: '',
                 fit: BoxFit.contain,
                 errorWidget: (context, url, error) => Image.asset(
-                  'assets/logo.png',
+                  'assets/5.png',
+                  fit: BoxFit.cover,
                 ),
                 progressIndicatorBuilder: (context, url, downloadProgress) {
                   return Center(
@@ -309,10 +187,12 @@ class Products extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    product.product.productName[locale],
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    product.product.productName,
                     style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           fontSize: 15.0,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                         ),
                   ),
                   Row(
@@ -326,27 +206,61 @@ class Products extends ConsumerWidget {
                               '${region.currency}${formatPrice(product.vendorProduct.price)}',
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
-                            Text(
-                              '  |  $productOrders ordered',
-                              style: Theme.of(context).textTheme.bodySmall,
-                            ),
+                            Text('  |  $productOrders ordered',
+                                style: Theme.of(context).textTheme.bodySmall),
                           ],
                         ),
                       ),
+                      // SizedBox(
+                      //   width: 100,
+                      //   child: MaterialButton(
+                      //     textTheme: ButtonTextTheme.accent,
+                      //     onPressed: () {
+                      //       showActionDialogBox(context, product);
+                      //     },
+                      //     child: Text(
+                      //       AppLocalizations.of(context)!.edit,
+                      //       style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      //                 color: kMainColor,
+                      //                 fontWeight: FontWeight.bold,
+                      //               ),
+                      //     ),
+                      //   ),
+                      // ),
+
                       SizedBox(
                         width: 100,
-                        child: MaterialButton(
-                          textTheme: ButtonTextTheme.accent,
-                          onPressed: () {
-                            showActionDialogBox(context, product);
-                          },
-                          child: Text(
-                            AppLocalizations.of(context)!.edit,
-                            style:
-                                Theme.of(context).textTheme.bodySmall!.copyWith(
-                                      color: kMainColor,
-                                      fontWeight: FontWeight.bold,
+                        child: Container(
+                          color: Colors.transparent,
+                          height: 30.0,
+                          child: Container(
+                            height: 30.0,
+                            margin: const EdgeInsets.only(right: 10.0),
+                            child: OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(
+                                    color: lavenderColor, width: 1.0),
+                                backgroundColor: Colors.transparent,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10.0),
+                              ),
+                              onPressed: () {
+                                showActionDialogBox(context, product);
+                              },
+                              child: Text(
+                                AppLocalizations.of(context)!.edit,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall!
+                                    .copyWith(
+                                      color: lavenderColor,
+                                      fontWeight: FontWeight.w500,
                                     ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -366,9 +280,6 @@ class Products extends ConsumerWidget {
     TextEditingController amountController = TextEditingController(
       text: formatPrice(product.vendorProduct.price),
     );
-    TextEditingController quantityController = TextEditingController(
-  text: product.vendorProduct.quantity != null ? product.vendorProduct.quantity.toString() : '',
-);
 
     return showDialog(
       context: context,
@@ -388,7 +299,7 @@ class Products extends ConsumerWidget {
                 TextField(
                   keyboardType: TextInputType.number,
                   controller: amountController,
-                  cursorColor: kMainColor,
+                  cursorColor: lavenderColor,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
                   ],
@@ -401,18 +312,6 @@ class Products extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: 10.0),
-                 TextField(
-                  keyboardType: TextInputType.number,
-                  controller: quantityController,
-                  cursorColor: kMainColor,
-                  inputFormatters: [
-                    FilteringTextInputFormatter.digitsOnly,
-                  ],
-                  decoration: inputDecorationWithLabel(
-                    'Enter quantity',
-                    'Quantity',
-                  ),
-                )
               ],
             ),
           ),
@@ -421,12 +320,10 @@ class Products extends ConsumerWidget {
               onPressed: () {
                 String amount = amountController.text.replaceAll(',', '');
                 bool isValid = amount.isNotEmpty;
-                String quantity = quantityController.text;
                 if (isValid) {
                   ProductServices.updateProduct(
                     {
                       'price': int.parse(amount),
-                      'quantity': int.parse(quantity)
                     },
                     product.vendorProduct.id,
                   );
@@ -437,8 +334,8 @@ class Products extends ConsumerWidget {
               },
               child: Text(
                 locale.update,
-                style: TextStyle(
-                  color: kMainColor,
+                style: const  TextStyle(
+                  color: lavenderColor,
                 ),
               ),
             ),
@@ -450,7 +347,7 @@ class Products extends ConsumerWidget {
               child: Text(
                 locale.remove,
                 style: TextStyle(
-                  color: kMainColor,
+                  color: lavenderColor,
                 ),
               ),
             ),

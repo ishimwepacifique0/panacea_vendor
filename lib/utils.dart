@@ -123,7 +123,7 @@ InputDecoration inputDecorationWithLabel(String hint, String labelText) {
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
-      borderSide: BorderSide(color: kMainColor),
+      borderSide:const BorderSide(color: lavenderColor),
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
@@ -157,11 +157,11 @@ void showConfirmModal(BuildContext context, String title, String message,
             onPressed: onPressed,
             child: Text(
               actionText,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 11.7,
                 letterSpacing: 0.06,
                 fontWeight: FontWeight.bold,
-                color: kMainColor,
+                color: lavenderColor,
               ),
             ),
           ),
@@ -259,11 +259,11 @@ void showRejectModal(BuildContext context, String title, String message,
             },
             child: Text(
               AppLocalizations.of(context)!.cancel,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 11.7,
                 letterSpacing: 0.06,
                 fontWeight: FontWeight.bold,
-                color: kMainColor,
+                color: lavenderColor,
               ),
             ),
           ),
@@ -470,7 +470,7 @@ void showPermissionDialog(context, Function initApp) async {
         ),
         actions: <Widget>[
           MaterialButton(
-            textColor: kMainColor,
+            textColor: lavenderColor,
             shape: RoundedRectangleBorder(
               side: BorderSide(color: kTransparentColor),
             ),
@@ -483,7 +483,7 @@ void showPermissionDialog(context, Function initApp) async {
             shape: RoundedRectangleBorder(
               side: BorderSide(color: kTransparentColor),
             ),
-            textColor: kMainColor,
+            textColor: lavenderColor,
             onPressed: () async {
               initApp();
             },
@@ -507,7 +507,7 @@ void showLocationServiceDialog(BuildContext context, Function initApp) async {
         content: Text(locale.enableLocationMessage),
         actions: <Widget>[
           MaterialButton(
-            textColor: kMainColor,
+            textColor: lavenderColor,
             shape: RoundedRectangleBorder(
               side: BorderSide(color: kTransparentColor),
             ),
@@ -520,7 +520,7 @@ void showLocationServiceDialog(BuildContext context, Function initApp) async {
             shape: RoundedRectangleBorder(
               side: BorderSide(color: kTransparentColor),
             ),
-            textColor: kMainColor,
+            textColor: lavenderColor,
             onPressed: () {
               initApp();
             },

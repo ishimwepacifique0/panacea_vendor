@@ -24,7 +24,7 @@ class _HeaderState extends State<Header> {
         style: TextStyle(
           fontSize: 22,
           fontWeight: FontWeight.w500,
-          color: kMainColor,
+          color: lavenderColor,
           fontFamily: GoogleFonts.poppins().fontFamily,
         ),
       ),
@@ -47,7 +47,7 @@ class H1 extends StatelessWidget {
         text,
         style: TextStyle(
           fontSize: 18,
-          color: kMainColor,
+          color: lavenderColor,
           fontFamily: GoogleFonts.poppins().fontFamily,
         ),
       ),
@@ -70,7 +70,7 @@ class H2 extends StatelessWidget {
         text,
         style: TextStyle(
           fontSize: 16,
-          color: kMainColor,
+          color: lavenderColor,
           fontFamily: GoogleFonts.poppins().fontFamily,
         ),
       ),

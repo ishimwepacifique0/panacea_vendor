@@ -219,7 +219,7 @@ class Orders extends ConsumerWidget {
                                 child: Row(
                                   children: [
                                     Text(
-                                      '${product?.productName[locale.localeName]} x '
+                                      '${product?.productName} x '
                                       '${item['quantity']}',
                                       textAlign: TextAlign.start,
                                       style: Theme.of(context)

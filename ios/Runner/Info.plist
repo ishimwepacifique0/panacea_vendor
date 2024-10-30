@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>MadeIn Vendor</string>
+	<string>Panacea Pharmacy</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -52,11 +52,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>Madein Vendor uses camera access for personalizing profiles and for efficient claims reporting process, updating images, and for KYC verification, ensuring enhanced user experience and regulatory compliance</string>
+	<string>Panacea Pharmacy uses camera access for personalizing profiles and for efficient claims reporting process, updating images, and for KYC verification, ensuring enhanced user experience and regulatory compliance</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Madein Vendor requires photo access for customizing profiles, efficient claims reporting process, and for essential KYC verifications, ensuring a personalized, secure experience and regulatory compliance.</string>
+	<string>Panacea Pharmacy requires photo access for customizing profiles, efficient claims reporting process, and for essential KYC verifications, ensuring a personalized, secure experience and regulatory compliance.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Madein Vendor requires your location to display nearby bars and restaurants, enhancing your experience with accurate recommendations and relevant information.</string>
+	<string>Panacea Pharmacy requires your location to display nearby bars and restaurants, enhancing your experience with accurate recommendations and relevant information.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

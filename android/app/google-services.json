@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "498351091702",
-    "project_id": "madein-a5f78",
-    "storage_bucket": "madein-a5f78.appspot.com"
+    "project_number": "711859015599",
+    "project_id": "panacea-b4045",
+    "storage_bucket": "panacea-b4045.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:498351091702:android:3f005c4641b5883467e1d7",
+        "mobilesdk_app_id": "1:711859015599:android:01e649ad0d388b140fa95a",
         "android_client_info": {
-          "package_name": "com.madein.app"
+          "package_name": "com.panacea.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCAw3Uapngc4IuswkLAhcFgtDlLjpqJVY8"
+          "current_key": "AIzaSyAX2rOX0b4o2UbfVR9o_rSWtxVjbN0xfKw"
         }
       ],
       "services": {
@@ -26,15 +26,15 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:498351091702:android:a006743cd2a9c88f67e1d7",
+        "mobilesdk_app_id": "1:711859015599:android:2de1f1518c3c82c40fa95a",
         "android_client_info": {
-          "package_name": "com.madein.vendor"
+          "package_name": "com.panacea.pharmacy"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCAw3Uapngc4IuswkLAhcFgtDlLjpqJVY8"
+          "current_key": "AIzaSyAX2rOX0b4o2UbfVR9o_rSWtxVjbN0xfKw"
         }
       ],
       "services": {

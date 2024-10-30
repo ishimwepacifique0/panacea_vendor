@@ -47,29 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCAw3Uapngc4IuswkLAhcFgtDlLjpqJVY8',
-    appId: '1:498351091702:android:a006743cd2a9c88f67e1d7',
-    messagingSenderId: '498351091702',
-    projectId: 'madein-a5f78',
-    storageBucket: 'madein-a5f78.appspot.com',
+    apiKey: 'AIzaSyAX2rOX0b4o2UbfVR9o_rSWtxVjbN0xfKw',
+    appId: '1:711859015599:android:2de1f1518c3c82c40fa95a',
+    messagingSenderId: '711859015599',
+    projectId: 'panacea-b4045',
+    storageBucket: 'panacea-b4045.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBX-OsDNv0-JUsZnNtLua3Mf6ubwXMOBHY',
-    appId: '1:498351091702:ios:5f6c5084cb3e58a767e1d7',
-    messagingSenderId: '498351091702',
-    projectId: 'madein-a5f78',
-    storageBucket: 'madein-a5f78.appspot.com',
-    iosBundleId: 'com.madein.vendor',
+    apiKey: 'AIzaSyDiol2KOzgL79Lcly1VAuwhh0garys1sBc',
+    appId: '1:711859015599:ios:d15cde43db8538870fa95a',
+    messagingSenderId: '711859015599',
+    projectId: 'panacea-b4045',
+    storageBucket: 'panacea-b4045.appspot.com',
+    iosBundleId: 'com.panacea.pharmacy',
   );
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAJ3EwNw_WXwmuB5PgEj6JCh8JxXWvBkoE',
-    appId: '1:49459051581:web:86da4bea01e16cd4107e54',
-    messagingSenderId: '49459051581',
-    projectId: 'icupa-396da',
-    authDomain: 'icupa-396da.firebaseapp.com',
-    storageBucket: 'icupa-396da.appspot.com',
-    measurementId: 'G-D80RPNQVCZ',
+    apiKey: 'AIzaSyAjvjP4Z3JiTvnNe0ka__v4oG5wGAyUJX4',
+    appId: '1:711859015599:web:f20cee0c77c0fbcf0fa95a',
+    messagingSenderId: '711859015599',
+    projectId: 'panacea-b4045',
+    authDomain: 'panacea-b4045.firebaseapp.com',
+    storageBucket: 'panacea-b4045.appspot.com',
+    measurementId: 'G-WFSSB77F0W',
   );
+
 }

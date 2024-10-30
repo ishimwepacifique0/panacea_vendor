@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:icupa_vendor/constants.dart';
 import 'package:icupa_vendor/models/product.dart';
 import 'package:icupa_vendor/shared/shared_states.dart';
 import 'package:icupa_vendor/themes/colors.dart';
@@ -38,8 +37,7 @@ class ProductWidget extends ConsumerWidget {
               Radius.circular(10.0),
             ),
             child: CachedNetworkImage(
-              imageUrl:
-                  product.image.isNotEmpty ? product.image : defaultVendorImg,
+              imageUrl: '',
               width: 70.0,
               height: 70.0,
               fit: BoxFit.contain,
@@ -56,8 +54,9 @@ class ProductWidget extends ConsumerWidget {
               },
               errorWidget: (context, url, error) {
                 return Image.asset(
-                  'assets/logo.png',
-                  width: 70.0,
+                  width: 30,
+                  'assets/5.png',
+                   fit: BoxFit.cover,
                 );
               },
             ),
@@ -70,9 +69,11 @@ class ProductWidget extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                product.productName[locale.localeName],
+                product.productName,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.displayMedium!.copyWith(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.w400,
                     ),
               ),
@@ -94,25 +95,32 @@ class ProductWidget extends ConsumerWidget {
                         )
                       : Container(),
                   Container(
-                    color: Colors.transparent,
-                    height: 30.0,
-                    child: Container(
-                      height: 30.0,
-                      margin: const EdgeInsets.only(right: 10.0),
-                      child: MaterialButton(
-                        textTheme: ButtonTextTheme.accent,
-                        onPressed: onTap,
-                        child: Text(
-                          selected ? locale.edit : locale.add,
-                          style:
-                              Theme.of(context).textTheme.bodySmall!.copyWith(
-                                    color: kMainColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        ),
+                color: Colors.transparent,
+                height: 30.0,
+                child: Container(
+                  height: 30.0,
+                  margin: const EdgeInsets.only(right: 10.0),
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      side:const BorderSide(color: lavenderColor, width: 1.0), 
+                      backgroundColor: Colors.transparent, 
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0), 
+                    ),
+                    onPressed: onTap,
+                    child: Text(
+                      selected ? locale.edit : locale.add,
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                            color: lavenderColor,
+                            fontWeight: FontWeight.w500,
+                          ),
                     ),
                   ),
+                ),
+              ),
+
                 ],
               ),
             ],
